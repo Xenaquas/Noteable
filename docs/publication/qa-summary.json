@@ -1,0 +1,200 @@
+{
+  "review_date": "2026-10-19",
+  "validation_scope": "Publication and document fidelity; application findings remain unchanged",
+  "source_snapshot_commit": "b2bd2c35196125a78d2be0d82d8166fb659f020f",
+  "renderer": "Microsoft Word 16 read-only PDF export and bundled Python pdf2image with Poppler at 110 DPI",
+  "renderer_fallback_reason": "The Documents skill render_docx.py reported that LibreOffice soffice.exe was unavailable",
+  "documents": 18,
+  "final_pages": 106,
+  "embedded_image_instances": 59,
+  "original_screenshot_hashes_verified": 35,
+  "unchanged_dart_files_local_and_git": 65,
+  "unchanged_review_markdown_sources": 18,
+  "root_markdown": [
+    "README.md"
+  ],
+  "qa_pngs_and_pdfs": "Temporary internal QA outputs; excluded from published artifacts",
+  "files": [
+    {
+      "source": "README.md",
+      "source_sha256": "fc133784d82337a1ee3e2597cfaf39a4a70d57486e6a5b44b5d05b6ad62c1399",
+      "document": "docs/documents/current/README.docx",
+      "document_sha256": "9f96a95cf9399d567eab8d874e4b7d392139a5e9470c767962f280b57fb5dce9",
+      "embedded_images": 2,
+      "pages": 4,
+      "media_parts": 2,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/APPLICATION_ARCHITECTURE.md",
+      "source_sha256": "2e65d70421f4fa1408bbac83eae2854f91c57d021af09aa4071c616cc2fc0b65",
+      "document": "docs/documents/current/APPLICATION_ARCHITECTURE.docx",
+      "document_sha256": "328e5bce12ec590968f859f95f2049df000aba6089e4929ae9674a6b433d21bb",
+      "embedded_images": 3,
+      "pages": 7,
+      "media_parts": 1,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/APP_FEEDBACK.md",
+      "source_sha256": "a0d5383dfaf2d6a8c7514240c368e09f4b4fca83ba0e6fb537d27b09cb1dbf3a",
+      "document": "docs/documents/current/APP_FEEDBACK.docx",
+      "document_sha256": "61cf3da3e0c118726d4167722ba0181410469893342663de86e2895c9736ec7d",
+      "embedded_images": 0,
+      "pages": 6,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/APP_WORKFLOW.md",
+      "source_sha256": "8606cf869caaa64d54f3a588c98be3e4a630b6fb14da46ba9f7abac62d3a1543",
+      "document": "docs/documents/current/APP_WORKFLOW.docx",
+      "document_sha256": "a807d88e6f5c9cb706f648580821d14389c7f65a06972412ade9637c87fc7c39",
+      "embedded_images": 18,
+      "pages": 13,
+      "media_parts": 17,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/CURRENT_STATUS.md",
+      "source_sha256": "e97f31855bfb3fbbf6dcff3f44480f7ec9bf40c868e062c13be4b65db068c339",
+      "document": "docs/documents/current/CURRENT_STATUS.docx",
+      "document_sha256": "2948fb300334fb5efb45e28f7523d6c1ad2ac454281f1f024a597c648165ce19",
+      "embedded_images": 0,
+      "pages": 3,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/DART_CODE_REVIEW.md",
+      "source_sha256": "c31ca0fe52a4081679a60c49f2e81bdb6aa0e46b4b1b3b6f6eeb87dcaa89664d",
+      "document": "docs/documents/current/DART_CODE_REVIEW.docx",
+      "document_sha256": "3d895c2442dbefb48bfc7c055e755b72582d18a2aba529ba785c01c10c094e4b",
+      "embedded_images": 0,
+      "pages": 6,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/EVIDENCE.md",
+      "source_sha256": "23565329b47c67b04e4cb9874b3f18dea243916db1439f9129114b563242e0ca",
+      "document": "docs/documents/current/EVIDENCE.docx",
+      "document_sha256": "22e1d58100dfade270d4908f86faab837f579838c9752c2f2a6ef693da2fc16f",
+      "embedded_images": 36,
+      "pages": 21,
+      "media_parts": 36,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/FEATURE_STATUS.md",
+      "source_sha256": "bf931eee4bad06ddaf91824316cd516c6c281a9a913e7c65e17e04daa4d31686",
+      "document": "docs/documents/current/FEATURE_STATUS.docx",
+      "document_sha256": "f087371e3ea209ac359a0a1c787e04db9931f613fce1afd78ffc92a82cc41793",
+      "embedded_images": 0,
+      "pages": 4,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/FUTURE_SCOPE.md",
+      "source_sha256": "ecdf43941ff17f23f5a9612a2ffa05c0116f7fb8268ad99957eca1f3006c5044",
+      "document": "docs/documents/current/FUTURE_SCOPE.docx",
+      "document_sha256": "97ac8497c36ce25a3e935002cc4c3ab95e405f87788aed8d9a43523c537e00bb",
+      "embedded_images": 0,
+      "pages": 3,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/GITHUB_READINESS.md",
+      "source_sha256": "89e229659a5e024392b1f5512ffc4ac4d19a49cc896ed5cd6cf056b10dd5ebe7",
+      "document": "docs/documents/current/GITHUB_READINESS.docx",
+      "document_sha256": "38b6980e1d611ed6393331583c5f6d18ba2686bf1de71620cb7201d5c3bb9c45",
+      "embedded_images": 0,
+      "pages": 3,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/INDEX.md",
+      "source_sha256": "a7bc5844f4d6f573767f7533f313c68e18311df6ed65c02d6ed112ef3559364a",
+      "document": "docs/documents/current/INDEX.docx",
+      "document_sha256": "a8b4a5c1ab56b1a7cd19535c7c83ee61484b2d28913cd8f898c7ac5fb8b4f121",
+      "embedded_images": 0,
+      "pages": 2,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/PROJECT_CONTEXT.md",
+      "source_sha256": "0611307fbf9195a31998af83bc4d5a5369fc954c8493cad147b9c75d6445fc74",
+      "document": "docs/documents/current/PROJECT_CONTEXT.docx",
+      "document_sha256": "e8e12d90c589e39e4c29f3a9b582883cf838480323534c763e09d7b9a067a5cd",
+      "embedded_images": 0,
+      "pages": 3,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/VERIFICATION.md",
+      "source_sha256": "76ea431cf800aa44b00e4bb47c4c3d0af18f8d47c1073bb8283b8fc92a968b1d",
+      "document": "docs/documents/current/VERIFICATION.docx",
+      "document_sha256": "4c3be5c595332f0fb4796a99a890c87318833d366513b72439a478a54800e86a",
+      "embedded_images": 0,
+      "pages": 4,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/archive/App_plan.md",
+      "source_sha256": "9dd205822ec5c32807e97ca62a0d1799cbfb2622f233e8d25e0e56903fd8f91b",
+      "document": "docs/documents/archive/App_plan.docx",
+      "document_sha256": "4d2f4b23886c7ad6933199c1175c7ed7cc910ac8f406d32c2233bc95f72fb8cd",
+      "embedded_images": 0,
+      "pages": 20,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/archive/Next_Step.md",
+      "source_sha256": "940b1598d77496924b20e12b464f0f155f0d6fd13a8bd0c1741892d855080c0e",
+      "document": "docs/documents/archive/Next_Step.docx",
+      "document_sha256": "bebc5e3c9b822afc42d0b77b05329d6c1ab6ee07edabfd49ce2fe337c3356ffa",
+      "embedded_images": 0,
+      "pages": 2,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/archive/PLAN.md",
+      "source_sha256": "fe8fade2498cf69a2b9d4f07b7740840fa79cd291d2a506b7176b58fea46d9f9",
+      "document": "docs/documents/archive/PLAN.docx",
+      "document_sha256": "9811ec6fdbe818c5aeed592e74c9024072c528d8e77dc1acc89aa455e6c9ddd7",
+      "embedded_images": 0,
+      "pages": 2,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/archive/README-before-review.md",
+      "source_sha256": "53074a14cda8cc44ea01ad5e4aa4ece0d4c50aecb393484aac3e83d5d8da2dba",
+      "document": "docs/documents/archive/README-before-review.docx",
+      "document_sha256": "2b1ebb6544a7b0c023f49ea8214c3d544e9e2f6c2971447b857a0ca96781c711",
+      "embedded_images": 0,
+      "pages": 1,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    },
+    {
+      "source": "docs/archive/Summary.md",
+      "source_sha256": "f130775ccca14d0bb92c74758042d35be9ada506e46a2782f43e6230aa17b814",
+      "document": "docs/documents/archive/Summary.docx",
+      "document_sha256": "94354e58ed03586d09efa1f3c1be8fcb66e4ed1bb683b0b5053322910490a33e",
+      "embedded_images": 0,
+      "pages": 2,
+      "media_parts": 0,
+      "visual_review": "Every final page PNG opened and inspected at original rendered size"
+    }
+  ],
+  "drive_artifact_files_verified": 176
+}
