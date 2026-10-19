@@ -58,7 +58,7 @@ class _NotificationCenterScreenState
           ),
         );
       } else if (r.ownerType == 'note') {
-        final note = await noteRepo.getNote(r.ownerId);
+        final note = await noteRepo.getNoteSummary(r.ownerId);
         if (note == null || note.id == null) continue;
         items.add(
           _NotificationItem(
@@ -272,7 +272,6 @@ class _ReminderTile extends StatelessWidget {
         MaterialPageRoute(
           builder: (_) => NotePreviewScreen(
             noteId: item.ownerId,
-            skipLockCheck: true,
           ),
         ),
       );

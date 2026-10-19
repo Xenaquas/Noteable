@@ -1,0 +1,23 @@
+00:00 +0: loading A:/Android Flutter/digital_memory/integration_test/phase_a_privacy_test.dart
+Running Gradle task 'assembleDebug'...                            147.5s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...           9.8s
+00:00 +0 -1: loading A:/Android Flutter/digital_memory/integration_test/phase_a_privacy_test.dart [E]
+  Failed to load "A:/Android Flutter/digital_memory/integration_test/phase_a_privacy_test.dart": Instance of 'VmServiceDisappearedException'
+  package:flutter_tools/src/vmservice.dart 903:7                      FlutterVmService._getIsolateRefs
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/vmservice.dart 884:48                     FlutterVmService.findExtensionIsolate
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/integration_test_device.dart 111:46  IntegrationTestTestDevice.start
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/test/flutter_platform.dart 679:51         FlutterPlatform._startTest.<fn>
+  ===== asynchronous gap ===========================
+  package:flutter_tools/src/base/async_guard.dart 108:24              asyncGuard.<fn>
+  
+00:00 +0 -1: Some tests failed.
+
+Failing tests:
+  A:/Android Flutter/digital_memory/integration_test/phase_a_privacy_test.dart: loading A:/Android Flutter/digital_memory/integration_test/phase_a_privacy_test.dart
+adb uninstall failed: ProcessException: Process exited abnormally with exit code 1:
+adb.exe: device 'emulator-5560' not found
+  Command: C:\Users\Isa\AppData\Local\Android\Sdk\platform-tools\adb.exe -s emulator-5560 uninstall com.example.digital_memory

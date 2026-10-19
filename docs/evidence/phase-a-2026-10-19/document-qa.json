@@ -1,0 +1,19 @@
+{
+  "document": "A:\\Android Flutter\\digital_memory\\docs\\documents\\current\\PHASE_A_SECURITY_REVIEW.docx",
+  "pages": 9,
+  "renderer": "Microsoft Word 16 PDF export; bundled renderer unavailable because LibreOffice is absent",
+  "all_pages_visually_inspected": true,
+  "embedded_images": 3,
+  "google_docs_title_sanitizer": "PASS",
+  "source_sha256": "916368b4898198d647d8fd93f14486940053c1f1ed46f62172934a209e9797d8",
+  "document_sha256": "7b22dd65d22f6d131dd673d8c57c5da124f844388e5f5a32461b4b3ec4d81d16",
+  "native_google_docs_url": "https://docs.google.com/document/d/1yRmxdBtS4XI_VEaKu1BRNRTdAQ5gw6JVS9BnpMbSZMs/edit?usp=drivesdk",
+  "native_pdf_pages": 9,
+  "native_all_pages_visually_inspected": true,
+  "native_readback": {
+    "tables": 4,
+    "images": 3,
+    "headings": 16,
+    "incident_and_test_counts_preserved": true
+  }
+}

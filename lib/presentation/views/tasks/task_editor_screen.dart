@@ -69,7 +69,7 @@ class _TaskEditorScreenState extends ConsumerState<TaskEditorScreen> {
   Future<void> _loadLinkedNote() async {
     final id = _noteId;
     if (id == null) return;
-    final note = await ref.read(noteRepoProvider).getNote(id);
+    final note = await ref.read(noteRepoProvider).getNoteSummary(id);
     if (mounted) {
       setState(() {
         _linkedNote = note;
@@ -440,7 +440,6 @@ class _TaskEditorScreenState extends ConsumerState<TaskEditorScreen> {
                   MaterialPageRoute(
                     builder: (_) => NotePreviewScreen(
                       noteId: _noteId!,
-                      skipLockCheck: true,
                     ),
                   ),
                 );

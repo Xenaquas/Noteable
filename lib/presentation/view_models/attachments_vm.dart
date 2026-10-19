@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -5,15 +6,25 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../domain/entities/attachment_entity.dart';
 import '../../domain/entities/note_entity.dart';
 import '../../domain/repositories/note_repository.dart';
+import '../../core/services/note_authorization.dart';
 import 'di.dart';
 
 enum AttachmentFilter { all, images, pdf, audio, video, other }
 enum AttachmentSort { newest, oldest, nameAz, nameZa }
 
 class AttachmentsViewModel extends ChangeNotifier {
-  AttachmentsViewModel(this._noteRepo);
+  AttachmentsViewModel(this._noteRepo, this._authorization) {
+    _changes = _noteRepo.changes.listen((_) => load());
+    _authorization.addListener(_privacyChanged);
+  }
 
   final NoteRepository _noteRepo;
+  final NoteAuthorization _authorization;
+  StreamSubscription<void>? _changes;
+  bool _disposed = false;
+  int _loadVersion = 0;
+
+  void _privacyChanged() { load(); }
   SharedPreferences? _prefs;
   static const _prefFilterKey = 'attachments_filter';
   static const _prefSortKey = 'attachments_sort';
@@ -28,23 +39,30 @@ class AttachmentsViewModel extends ChangeNotifier {
   AttachmentSort get sort => _sort;
 
   List<AttachmentEntity> _all = [];
-  List<AttachmentEntity> get items => _applyFilters(_all);
+  List<AttachmentEntity> get items => _applyFilters(_all.where((a) {
+    final owner = _notesById[a.noteId];
+    return owner != null && (!owner.isLocked ||
+        _authorization.allows(a.noteId, NoteOperation.attachment));
+  }).toList());
 
   Map<int, NoteEntity> _notesById = {};
   NoteEntity? noteFor(int id) => _notesById[id];
 
   Future<void> load() async {
+    final version = ++_loadVersion;
+    if (_disposed) return;
     _loading = true;
     notifyListeners();
     try {
       await _loadPrefs();
       final attachments = await _noteRepo.listAllAttachments();
       final notes = await _noteRepo.listNotes();
+      if (_disposed || version != _loadVersion) return;
       _all = attachments;
       _notesById = {for (final n in notes) n.id!: n};
     } finally {
       _loading = false;
-      notifyListeners();
+      if (!_disposed && version == _loadVersion) notifyListeners();
     }
   }
 
@@ -132,9 +150,18 @@ class AttachmentsViewModel extends ChangeNotifier {
     await _prefs!.setString(_prefFilterKey, _filter.name);
     await _prefs!.setString(_prefSortKey, _sort.name);
   }
+
+  @override
+  void dispose() {
+    _disposed = true;
+    _changes?.cancel();
+    _authorization.removeListener(_privacyChanged);
+    super.dispose();
+  }
 }
 
 final attachmentsVmProvider =
     ChangeNotifierProvider<AttachmentsViewModel>((ref) {
-  return AttachmentsViewModel(ref.read(noteRepoProvider))..load();
+  return AttachmentsViewModel(ref.read(noteRepoProvider),
+      ref.read(noteAuthorizationProvider))..load();
 });

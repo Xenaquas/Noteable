@@ -10,6 +10,7 @@ The **19 October 2026** review includes all 65 Dart files, static analysis, the 
 
 | Report | Purpose |
 |---|---|
+| [Phase A privacy repair](docs/PHASE_A_SECURITY_REVIEW.md) | Current privacy changes, test evidence, preservation incident and release gate |
 | [Documentation index](docs/INDEX.md) | Navigate the complete review |
 | [Current status](docs/CURRENT_STATUS.md) | Run outcome and release blockers |
 | [Architecture](docs/APPLICATION_ARCHITECTURE.md) | Layers, state, storage, and services |
@@ -40,7 +41,7 @@ These are current debug-build captures using synthetic review content. See [Work
 - Material 3 themes, dynamic colors, font preferences, and partial localization.
 - Local notification integration and note JSON ZIP export.
 
-**Known limitations:** private-content entry paths can bypass locks; backups omit most app data and restore is defective; task/subtask/reminder integrity needs fixes. Some settings and schedule entry points are placeholders. See the [feature matrix](docs/FEATURE_STATUS.md).
+**Known limitations:** Phase A adds centralized privacy enforcement; its verification limits and an emulator data-loss incident are recorded in the [security report](docs/PHASE_A_SECURITY_REVIEW.md). Backups omit most app data and restore remains defective; task/subtask/reminder integrity needs fixes. SQLite/media are not encrypted at rest. Some settings and schedule entry points are placeholders. See the original [feature matrix](docs/FEATURE_STATUS.md) for the audit baseline.
 
 ## Run on Android
 

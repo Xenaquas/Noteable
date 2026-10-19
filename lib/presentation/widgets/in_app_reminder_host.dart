@@ -119,7 +119,6 @@ class _InAppReminderHostState extends ConsumerState<InAppReminderHost>
         MaterialPageRoute(
           builder: (_) => NotePreviewScreen(
             noteId: note.id!,
-            skipLockCheck: true,
           ),
         ),
       );
@@ -156,7 +155,7 @@ class _InAppReminderHostState extends ConsumerState<InAppReminderHost>
   }
 
   Future<NoteEntity?> _findNote(int id) {
-    return ref.read(noteRepoProvider).getNote(id);
+    return ref.read(noteRepoProvider).getNoteSummary(id);
   }
 
   Future<Schedule?> _findSchedule(int id) {
@@ -419,7 +418,6 @@ class _InAppReminderHostState extends ConsumerState<InAppReminderHost>
         MaterialPageRoute(
           builder: (_) => NotePreviewScreen(
             noteId: _activeNote!.id!,
-            skipLockCheck: true,
           ),
         ),
       );

@@ -21,6 +21,7 @@ import 'package:video_thumbnail/video_thumbnail.dart';
 
 import '../../../domain/entities/attachment_entity.dart';
 import '../../../domain/entities/note_entity.dart';
+import '../../../core/services/note_authorization.dart';
 import '../../view_models/di.dart';
 import '../../widgets/canvas_scaffold.dart';
 import '../../widgets/shimmer_skeleton.dart';
@@ -43,6 +44,7 @@ class _NoteEditorScreenState extends ConsumerState<NoteEditorScreen> {
 
   bool _isLoading = true;
   bool _isSaving = false;
+  bool _isLocking = false;
   bool _isLocked = false;
   bool _isLoadingAttachments = false;
   bool _dirty = false;
@@ -72,7 +74,6 @@ class _NoteEditorScreenState extends ConsumerState<NoteEditorScreen> {
     _titleController.addListener(_handleEdited);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _load();
-      _initRecorder();
     });
   }
 
@@ -107,7 +108,13 @@ class _NoteEditorScreenState extends ConsumerState<NoteEditorScreen> {
       return;
     }
 
-    final note = await repo.getNote(widget.noteId!);
+    final authorized = await ref.read(lockServiceProvider).authorizeNote(
+      context: context, noteId: widget.noteId!, operation: NoteOperation.edit);
+    if (!authorized) {
+      if (mounted) Navigator.of(context).pop();
+      return;
+    }
+    final note = await repo.getNote(widget.noteId!, operation: NoteOperation.edit);
     if (!mounted) return;
 
     if (note == null) {
@@ -153,7 +160,7 @@ class _NoteEditorScreenState extends ConsumerState<NoteEditorScreen> {
   void _queueAutoSave() {
     _autoSaveTimer?.cancel();
     _autoSaveTimer = Timer(const Duration(seconds: 2), () async {
-      if (!mounted || _isSaving || _isLocked || !_dirty) return;
+      if (!mounted || _isSaving || _isLocking || _isLocked || !_dirty) return;
       if (_shouldSkipAutoSave()) return;
       await _save(fromAuto: true);
     });
@@ -594,8 +601,35 @@ class _NoteEditorScreenState extends ConsumerState<NoteEditorScreen> {
   }
 
 
+  Future<void> _toggleLock() async {
+    if (_isLocking || _isSaving || _isLoading) return;
+    _autoSaveTimer?.cancel();
+    setState(() => _isLocking = true);
+    try {
+    final repo = ref.read(noteRepoProvider);
+    // Allocate only an empty shell before authentication. Canceled setup never
+    // persists the private draft's title, body or attachments as an open note.
+    if (_loadedNote?.id == null) {
+      final id = await repo.createEmptyNote(category: _selectedCategory);
+      _loadedNote = await repo.getNote(id);
+    }
+    if (!mounted || !await ref.read(lockServiceProvider).authorizeNote(
+      context: context, noteId: _loadedNote!.id!, operation: NoteOperation.changeLock)) {
+      return;
+    }
+    if (mounted) setState(() { _isLocked = !_isLocked; _dirty = true; });
+    } finally {
+      if (mounted) setState(() => _isLocking = false);
+    }
+  }
+
   Future<void> _save({bool fromAuto = false}) async {
-    if (_isSaving) return;
+    if (_isSaving || _isLocking || _isLoading) return;
+    if (_loadedNote?.id != null && !await ref.read(lockServiceProvider).authorizeNote(
+      context: context, noteId: _loadedNote!.id!, operation:
+        _loadedNote!.isLocked != _isLocked ? NoteOperation.changeLock : NoteOperation.edit)) {
+      return;
+    }
     setState(() => _isSaving = true);
 
     try {
@@ -846,7 +880,7 @@ class _NoteEditorScreenState extends ConsumerState<NoteEditorScreen> {
           IconButton(
             tooltip: _isLocked ? 'Unlock' : 'Lock',
             icon: Icon(_isLocked ? Icons.lock : Icons.lock_open),
-            onPressed: () => setState(() => _isLocked = !_isLocked),
+            onPressed: _toggleLock,
           ),
           IconButton(
             tooltip: 'Save',
@@ -966,6 +1000,11 @@ class _NoteEditorScreenState extends ConsumerState<NoteEditorScreen> {
   }
 
   Future<void> _openAttachmentDraft(_AttachmentDraft draft) async {
+    if (_loadedNote?.id != null && !await ref.read(lockServiceProvider).authorizeNote(
+      context: context, noteId: _loadedNote!.id!, operation: NoteOperation.attachment)) {
+      return;
+    }
+    if (!mounted) return;
     if (!File(draft.localPath).existsSync()) return;
     final ext = draft.extension;
     if (_AttachmentTile._isImageExt(ext)) {

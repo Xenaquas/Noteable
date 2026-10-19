@@ -8,6 +8,8 @@
     <application
         android:label="digital_memory"
         android:name="${applicationName}"
+        android:fullBackupContent="@xml/credential_backup_rules"
+        android:dataExtractionRules="@xml/credential_data_extraction_rules"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

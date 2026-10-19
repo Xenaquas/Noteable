@@ -20,6 +20,7 @@ import 'package:path_provider/path_provider.dart';
 import '../../../data/local/databases/app_drift_database.dart';
 import '../../../domain/entities/attachment_entity.dart';
 import '../../../domain/entities/note_entity.dart';
+import '../../../core/services/note_authorization.dart';
 import '../../view_models/di.dart';
 import '../note_editor/note_editor_screen.dart';
 import '../../widgets/shimmer_skeleton.dart';
@@ -29,12 +30,10 @@ class NotePreviewScreen extends ConsumerStatefulWidget {
     super.key,
     required this.noteId,
     this.heroTag,
-    this.skipLockCheck = false,
   });
 
   final int noteId;
   final String? heroTag;
-  final bool skipLockCheck;
 
   @override
   ConsumerState<NotePreviewScreen> createState() => _NotePreviewScreenState();
@@ -65,23 +64,18 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
   Future<void> _load() async {
     setState(() => _loading = true);
     final repo = ref.read(noteRepoProvider);
+    final authorized = await ref.read(lockServiceProvider).authorizeNote(
+      context: context, noteId: widget.noteId);
+    if (!authorized) {
+      if (mounted) Navigator.of(context).pop();
+      return;
+    }
     final note = await repo.getNote(widget.noteId);
 
     if (!mounted) return;
     if (note == null) {
       setState(() => _loading = false);
       return;
-    }
-
-    if (note.isLocked && !widget.skipLockCheck) {
-      final ok = await ref.read(lockServiceProvider).authenticate(
-            context: context,
-            reason: 'Unlock note to preview',
-          );
-      if (!ok) {
-        if (mounted) Navigator.of(context).pop();
-        return;
-      }
     }
 
     final attachments = await repo.listAttachments(note.id!);
@@ -123,8 +117,10 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
 
   Future<void> _print() async {
     if (_note == null) return;
+    if (!await _authorize(NoteOperation.export)) return;
     await Printing.layoutPdf(
       onLayout: (format) async {
+        if (!await _authorize(NoteOperation.export)) throw NoteAccessDenied();
         final doc = pw.Document();
         doc.addPage(
           pw.Page(
@@ -192,7 +188,7 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
             updatedAt: DateTime.now().toUtc(),
           ),
           title: 'Note reminder',
-          body: "Note '${_noteTitle(note)}' is due now!",
+          body: 'A note reminder is due. Open the app to view it.',
         );
     if (!mounted) return;
     final label =
@@ -230,11 +226,6 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
     }
   }
 
-  String _noteTitle(NoteEntity note) {
-    final title = note.title.trim();
-    return title.isEmpty ? 'Untitled note' : title;
-  }
-
   Future<void> _shareOptions() async {
     if (_note == null) return;
     await showModalBottomSheet<void>(
@@ -253,7 +244,7 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
               onTap: () async {
                 Navigator.pop(ctx);
                 final file = await _buildPdf();
-                if (file != null) {
+                if (file != null && mounted && await _authorize(NoteOperation.share)) {
                   // ignore: deprecated_member_use
                   await Share.shareXFiles([XFile(file.path)], subject: _note!.title);
                 }
@@ -265,7 +256,7 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
               onTap: () async {
                 Navigator.pop(ctx);
                 final file = await _buildZip();
-                if (file != null) {
+                if (file != null && mounted && await _authorize(NoteOperation.share)) {
                   // ignore: deprecated_member_use
                   await Share.shareXFiles([XFile(file.path)], subject: _note!.title);
                 }
@@ -279,6 +270,7 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
 
   Future<File?> _buildPdf() async {
     if (_note == null) return null;
+    if (!await _authorize(NoteOperation.share)) return null;
     final pdf = pw.Document();
     final text = _note!.contentPlain.trim().isEmpty
         ? 'No content'
@@ -304,6 +296,7 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
       ),
     );
     final dir = await getTemporaryDirectory();
+    if (!await _authorize(NoteOperation.share)) return null;
     final nameSafe =
         (_note!.title.isEmpty ? 'note' : _note!.title).replaceAll(RegExp(r'[^a-zA-Z0-9-_ ]'), '_');
     final file = File('${dir.path}/$nameSafe.pdf');
@@ -333,6 +326,7 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
     final bytes = ZipEncoder().encode(archive);
     if (bytes == null) return null;
     final dir = await getTemporaryDirectory();
+    if (!await _authorize(NoteOperation.share)) return null;
     final nameSafe =
         (_note!.title.isEmpty ? 'note' : _note!.title).replaceAll(RegExp(r'[^a-zA-Z0-9-_ ]'), '_');
     final zipFile = File('${dir.path}/$nameSafe-${DateTime.now().millisecondsSinceEpoch}.zip')
@@ -340,7 +334,12 @@ class _NotePreviewScreenState extends ConsumerState<NotePreviewScreen> {
     return zipFile;
   }
 
-  void _openAttachment(AttachmentEntity a) {
+  Future<bool> _authorize(NoteOperation operation) =>
+      ref.read(lockServiceProvider).authorizeNote(context: context,
+        noteId: widget.noteId, operation: operation);
+
+  Future<void> _openAttachment(AttachmentEntity a) async {
+    if (a.noteId != widget.noteId || !await _authorize(NoteOperation.attachment) || !mounted) return;
     final path = a.localPath;
     if (path.isEmpty || !File(path).existsSync()) {
       ScaffoldMessenger.of(context).showSnackBar(
