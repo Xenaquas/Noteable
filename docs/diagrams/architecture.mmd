@@ -1,0 +1,15 @@
+flowchart TD
+ subgraph A[Digital Memory - Current Architecture]
+ UI[Flutter MaterialApp and Home tabs] --> VM[Riverpod providers and ChangeNotifier view models]
+ UI --> S[Screen-owned orchestration and file handling]
+ VM --> NR[Domain NoteRepository contract]
+ NR --> SQ[Sqflite notes and attachments]
+ VM --> DR[Concrete task schedule reminder repositories]
+ S --> DR
+ DR --> DB[Drift SQLite tasks schedules reminders subtasks labels]
+ VM --> P[SharedPreferences settings and PIN]
+ S --> F[Local media files and ZIP export]
+ VM --> N[NotificationSyncService and Android plugin]
+ end
+ SQ -. noteId references without cross-database integrity .-> DB
+ P -. plaintext PIN risk .-> UI

@@ -1,0 +1,262 @@
+[
+  {
+    "Path": "lib/main.dart",
+    "SHA256": "ADD6C4BBE7E30FA538108E01D50059688FEBDEE31308EB0AE011B812C5594193"
+  },
+  {
+    "Path": "lib/app/app.dart",
+    "SHA256": "CAF522F792654C7575B21FEFB1EEA76C5FBC6E1F5A767FFB6EC0CB252F470EE9"
+  },
+  {
+    "Path": "lib/app/router.dart",
+    "SHA256": "8AA6B8E82F85759C9E45170452757891B40A52C73A2844F567BEE7EA6F5C9B60"
+  },
+  {
+    "Path": "lib/core/constants/app_constants.dart",
+    "SHA256": "F4CFFBE235F61DF337FC3411E90E4F627318924E0D9D569C474800DAEE865664"
+  },
+  {
+    "Path": "lib/core/constants/database_constants.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/core/services/auth_service.dart",
+    "SHA256": "736114F29B519E4C158F886A68281D907D7D18F7330A9141149ED334B6A026BB"
+  },
+  {
+    "Path": "lib/core/services/backup_service.dart",
+    "SHA256": "285BA38495013DB91BAA5351796C45BFBE5297960986CFF4800A0C6E6B5E1196"
+  },
+  {
+    "Path": "lib/core/services/lock_service.dart",
+    "SHA256": "FBC7A6DF65012D93B457FA1F43AF382DB656DEC2DA686B957020920BEA11EF9F"
+  },
+  {
+    "Path": "lib/core/services/notification_sync_service.dart",
+    "SHA256": "02BA785574085C44055A05BD665A239C8A9067FC2FFB48CBDB55B0DD92EF0CFF"
+  },
+  {
+    "Path": "lib/core/themes/app_theme.dart",
+    "SHA256": "F8D3E90FC9BF875B37B3ED2CC7F76CB0285CC40196D8CBBB69FCE1B24826F8F0"
+  },
+  {
+    "Path": "lib/core/themes/theme_controller.dart",
+    "SHA256": "CEF68F6B1D1B265642E2CC87588ACA3125A73DD79AE703F784FA4454A2443354"
+  },
+  {
+    "Path": "lib/data/local/databases/app_database.dart",
+    "SHA256": "EDF08A5835F3FDAC6D3C9685980ABE430812A9151729D8FD6AFFD6478D7B88BF"
+  },
+  {
+    "Path": "lib/data/local/databases/app_drift_database.dart",
+    "SHA256": "744D173B56A72BC0C60EEFBACDBA887C0BBD3A1CA52C26233C86A8DA6EDA2864"
+  },
+  {
+    "Path": "lib/data/local/databases/app_drift_database.g.dart",
+    "SHA256": "1E888AEF922F3BDE4198D3FEA2A57698D782AABEFCE0A358D98D35536236A646"
+  },
+  {
+    "Path": "lib/data/local/databases/note_dao.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/data/local/preferences/app_preferences.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/data/models/attachment_model.dart",
+    "SHA256": "949750510662C3A66EC8588AB8BB5B83EC7256BA49637EC3F2BC8A5C5C7D0DA4"
+  },
+  {
+    "Path": "lib/data/models/category_model.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/data/models/note_model.dart",
+    "SHA256": "312E3976A20BA219DA457553D1DD6CC74F929BA9B78D26CBBA01DEC98079178B"
+  },
+  {
+    "Path": "lib/data/repositories/category_repository.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/data/repositories/file_repository.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/data/repositories/note_repository.dart",
+    "SHA256": "24DB2279F58EB33F59FED5DBAE7A99B70BE1D09DDAD1F973473ADF0BED358570"
+  },
+  {
+    "Path": "lib/data/repositories/reminder_repository.dart",
+    "SHA256": "3DD1BEA42967710E4B022D272D6CD65084231428CC792801CD88DD6ADE6622AE"
+  },
+  {
+    "Path": "lib/data/repositories/schedule_repository.dart",
+    "SHA256": "764DB12A9A1B21CB82DC164A957F60F0532830C0A6253D0FE62FCE45515F8765"
+  },
+  {
+    "Path": "lib/data/repositories/task_repository.dart",
+    "SHA256": "59AEDC55508649E447823A85920AF2ED6D5F4443171DFE113B5591DE75097843"
+  },
+  {
+    "Path": "lib/data/sources/settings_local_source.dart",
+    "SHA256": "E36C6E45F715D878C7FE98C8E48FC3F9526AC97CDC72D3E47C591A94FA737FC4"
+  },
+  {
+    "Path": "lib/domain/entities/attachment_entity.dart",
+    "SHA256": "EE226A04173B973B66E3F3D65775566BB5C1F2431F4BF753C3B89ECBF38EA4D3"
+  },
+  {
+    "Path": "lib/domain/entities/note_entity.dart",
+    "SHA256": "34CA623E2500349C678601A1DD8887BFC8041C27C1C02864B370CA94E52EFB5C"
+  },
+  {
+    "Path": "lib/domain/repositories/note_repository.dart",
+    "SHA256": "7C85051D1C3CFCC7E9B6BF6B7D4BC425DD8304A5E0B79B45036651460D8DA701"
+  },
+  {
+    "Path": "lib/presentation/views/about/about_screen.dart",
+    "SHA256": "3ADF27E74CE51CB9FB16A50E9597A3FB2B7323DB706E3D46DBCC6FE37BEA12DC"
+  },
+  {
+    "Path": "lib/presentation/views/attachments/attachments_screen.dart",
+    "SHA256": "BB6D9C1C34E4CB7BAF7A731F20883621C5DECE138D4AACF616D231912378F411"
+  },
+  {
+    "Path": "lib/presentation/views/home/app_drawer.dart",
+    "SHA256": "16C04CF14EA64A585D1C4C199B7F999A0EDDDD57E30668FE2A18C8B79F89BB70"
+  },
+  {
+    "Path": "lib/presentation/views/home/home_screen.dart",
+    "SHA256": "3D3377F35B6E9A2BF62C81BC4EA0461DD0FCE65DCCB2E6FA1CF585D219245F54"
+  },
+  {
+    "Path": "lib/presentation/views/home/locked_notes_page.dart",
+    "SHA256": "D5B0428AA4E07F1D29FE55F9FF89E865797413E6D7DD53D1EE49F73855094319"
+  },
+  {
+    "Path": "lib/presentation/views/home/widgets/dashboard_metrics.dart",
+    "SHA256": "A4201792C41473A97C3397B504AEFAB2F443D300FE44C2AD4AAE03D2E7138F99"
+  },
+  {
+    "Path": "lib/presentation/views/home/widgets/locked_vault.dart",
+    "SHA256": "5268F2968929C50735FEEEDCC201D566BDF15A93F5BDA50A660D4181C487D10D"
+  },
+  {
+    "Path": "lib/presentation/views/note_editor/note_editor_screen.dart",
+    "SHA256": "4DDCAB561CAC68F7A51F10857D76B322A4FC92B02E8178BBC171FFE40C02BFE7"
+  },
+  {
+    "Path": "lib/presentation/views/note_preview/note_preview_screen.dart",
+    "SHA256": "B555E89680A09664703417B172461D025263E91C76A12D797E9374565DCA7B98"
+  },
+  {
+    "Path": "lib/presentation/views/schedule/schedule_tab.dart",
+    "SHA256": "0FA644C597F68DDB52153881CEB9799B678265B0E51EF421B5A513D8D6E0A8E1"
+  },
+  {
+    "Path": "lib/presentation/views/search/search_screen.dart",
+    "SHA256": "BE80927AA4F1B78F418FE3227402EA66A4B9E8ED6D12EA0D426D434F542F548A"
+  },
+  {
+    "Path": "lib/presentation/views/settings/notification_center_screen.dart",
+    "SHA256": "01B7B20FE0899BB828F6AE7AA2077CDD0531A30BDB99013C65C3746B507F5344"
+  },
+  {
+    "Path": "lib/presentation/views/settings/settings_screen.dart",
+    "SHA256": "49F8409FFF93E9DBA819095D683A767E8CF727D5D08A4970E5FB33D7501B962F"
+  },
+  {
+    "Path": "lib/presentation/views/tasks/subtask_draft.dart",
+    "SHA256": "DCE4BD09F591CFB71DAFEB6582B0ACB99B2D0C9AE42BBD3F4B23861CC624E10F"
+  },
+  {
+    "Path": "lib/presentation/views/tasks/task_editor_screen.dart",
+    "SHA256": "2969B6F5D4B940005A8EAB4FD1045DD36DD01947A924A2F18A4C3FA8B6AC93A7"
+  },
+  {
+    "Path": "lib/presentation/views/tasks/tasks_screen.dart",
+    "SHA256": "0E3766D5AA84BB1B155E4398E44A20B7384644340981F5AEB0E31626CE54B8B1"
+  },
+  {
+    "Path": "lib/presentation/view_models/app_settings_vm.dart",
+    "SHA256": "C0DBCE3D4EFC316E8FD958F8A4F939FEF3D06F989B840CCCCD14E0635BA846E1"
+  },
+  {
+    "Path": "lib/presentation/view_models/attachments_vm.dart",
+    "SHA256": "129BF7D9A639E1FB20B316E4A6EB46D7A5AE95E27A3D630943548A2DE063EB84"
+  },
+  {
+    "Path": "lib/presentation/view_models/auth_view_model.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/presentation/view_models/category_view_model.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/presentation/view_models/di.dart",
+    "SHA256": "F147F7AE909609DC00923E20C08A8F4A74A83204BC119EC4AC29DA86610FD3F1"
+  },
+  {
+    "Path": "lib/presentation/view_models/home_vm.dart",
+    "SHA256": "2C39B0BE4753FD929D127CC348F5AE537852AAB28AA211EA58214B7205596D78"
+  },
+  {
+    "Path": "lib/presentation/view_models/note_editor_vm.dart",
+    "SHA256": "D8CAEC973631023E1C784C0104035BB1150A3975E0CB31FAF9A4A25F2C89F7D0"
+  },
+  {
+    "Path": "lib/presentation/view_models/note_view_model.dart",
+    "SHA256": "0CB1235CCABEDD4C61B3E11D96D5DAE4C2EB40CA7F5B8FA6A94059C123C2E01A"
+  },
+  {
+    "Path": "lib/presentation/view_models/notes_stream_provider.dart",
+    "SHA256": "AB18E569DC46DB5D337249D7B92C324CBC63C089CF61B9EDAF2CF7B83A49C85B"
+  },
+  {
+    "Path": "lib/presentation/view_models/search_vm.dart",
+    "SHA256": "A3CF2EF2495DFB93F66AB9770611C585081FEF2A42BDA690D13797CA22A7EDA0"
+  },
+  {
+    "Path": "lib/presentation/view_models/tasks_vm.dart",
+    "SHA256": "331B204DDE60CDB72EDAF68BA9A7E444D98DAF13BC63D95C5688D37F453E9E06"
+  },
+  {
+    "Path": "lib/presentation/widgets/app_drawer.dart",
+    "SHA256": "33EC57A749FA8F25B9A04DB6004BD48C8B9D30ECAA05AB010F9EEE1935257D91"
+  },
+  {
+    "Path": "lib/presentation/widgets/attachment_preview.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/presentation/widgets/canvas_scaffold.dart",
+    "SHA256": "32D72CAD6FE69206337CED1FE8913F943CFB89E20602434512CC9E8829500C2A"
+  },
+  {
+    "Path": "lib/presentation/widgets/category_chip.dart",
+    "SHA256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "Path": "lib/presentation/widgets/in_app_reminder_host.dart",
+    "SHA256": "F87D7B091E320C3AEB2DF247D4D0DA800CBDD8B4D60FA5F8C3CEC743F5A437A3"
+  },
+  {
+    "Path": "lib/presentation/widgets/note_card.dart",
+    "SHA256": "CA5DF47D107C4F6A0EC1EFD6CFD8DA5515074B8DD3F12FB8DD33B9BB0798F2B6"
+  },
+  {
+    "Path": "lib/presentation/widgets/shimmer_skeleton.dart",
+    "SHA256": "38B42019E0171BEB5664076B40D6D716B1116DCEC73E812D59FBC4025CBDA1BF"
+  },
+  {
+    "Path": "lib/presentation/widgets/smooth_refresh_indicator.dart",
+    "SHA256": "6664110FBEA01E12615A8656FE34F5DB86982663961C93082D41F9DBDFA144F4"
+  },
+  {
+    "Path": "test/widget_test.dart",
+    "SHA256": "B847658042C3B3B89C77CD22E982D8D930E6EDB507FAAC52114FB57763B9892E"
+  }
+]

@@ -1,0 +1,71 @@
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+Running Gradle task 'assembleDebug'...                          
+Warning: Flutter support for your project's Android Gradle Plugin version (Android Gradle Plugin version 8.11.1) will soon be dropped. Please upgrade your Android Gradle Plugin version to a version of at least Android Gradle Plugin version 9.0.1 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's AGP version is typically defined in the plugins block of the `settings.gradle` file (A:\Android Flutter\digital_memory\android/settings.gradle), by a plugin with the id of com.android.application. 
+If you don't see a plugins block, your project was likely created with an older template version. In this case it is most likely defined in the top-level build.gradle file (A:\Android Flutter\digital_memory\android/build.gradle) by the following line in the dependencies block of the buildscript: "classpath 'com.android.tools.build:gradle:<version>'".
+
+Warning: Flutter support for your project's Kotlin version (2.2.20) will soon be dropped. Please upgrade your Kotlin version to a version of at least 2.3.20 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's KGP version is typically defined in the plugins block of the `settings.gradle` file (A:\Android Flutter\digital_memory\android/settings.gradle), by a plugin with the id of org.jetbrains.kotlin.android. 
+If you don't see a plugins block, your project was likely created with an older template version, in which case it is most likely defined in the top-level build.gradle file (A:\Android Flutter\digital_memory\android/build.gradle) by the ext.kotlin_version property.
+
+
+FAILURE: Build completed with 2 failures.
+
+1: Task failed with an exception.
+-----------
+* Where:
+Build file 'C:\Users\Isa\AppData\Local\Pub\Cache\hosted\pub.dev\video_thumbnail-0.5.6\android\build.gradle' line: 7
+
+* What went wrong:
+A problem occurred evaluating project ':video_thumbnail'.
+> Could not find method jcenter() for arguments [] on repository container of type org.gradle.api.internal.artifacts.dsl.DefaultRepositoryHandler.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to generate a Build Scan (Powered by Develocity).
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+2: Task failed with an exception.
+-----------
+* What went wrong:
+A problem occurred configuring project ':video_thumbnail'.
+> Failed to notify project evaluation listener.
+   > java.lang.NullPointerException (no error message)
+   > 'kotlin-android' plugin requires one of the Android Gradle plugins.
+     Please apply one of the following plugins to ':video_thumbnail' project:
+     - com.android.application
+     	- com.android.library
+     	- com.android.dynamic-feature
+     	- com.android.test
+     	- com.android.instantapp
+     	- com.android.feature
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to generate a Build Scan (Powered by Develocity).
+> Get more help at https://help.gradle.org.
+==============================================================================
+
+BUILD FAILED in 4m 19s
+Running Gradle task 'assembleDebug'...                            259.9s
+
+┌─ Flutter Fix ─────────────────────────────────────────────────────────────────────────┐
+│ [!] Starting AGP 9+, only the new DSL interface will be read.                         │
+│ This results in a build failure when applying the Flutter Gradle plugin at A:\Android │
+│ Flutter\digital_memory\android\app\build.gradle.kts.                                  │
+│                                                                                       │
+│ To resolve this update flutter or opt out of `android.newDsl`.                        │
+│ For instructions on how to opt out, see:                                              │
+│ https://developer.android.com/build/releases/agp-9-0-0-release-notes                  │
+│                                                                                       │
+│ If you are not upgrading to AGP 9+, run `flutter analyze --suggestions` to check for  │
+│ incompatible dependencies.                                                            │
+└───────────────────────────────────────────────────────────────────────────────────────┘
+Error: Gradle task assembleDebug failed with exit code 1

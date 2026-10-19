@@ -1,0 +1,918 @@
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+Running Gradle task 'assembleDebug'...                          
+Warning: Flutter support for your project's Gradle version (8.14.0) will soon be dropped. Please upgrade your Gradle version to a version of at least 9.1.0 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's gradle version is typically defined in the gradle wrapper file. By default, this can be found at A:\Android Flutter\digital_memory\android/gradle/wrapper/gradle-wrapper.properties. 
+For more information, see https://docs.gradle.org/current/userguide/gradle_wrapper.html.
+
+Warning: Flutter support for your project's Android Gradle Plugin version (Android Gradle Plugin version 8.11.1) will soon be dropped. Please upgrade your Android Gradle Plugin version to a version of at least Android Gradle Plugin version 9.0.1 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's AGP version is typically defined in the plugins block of the `settings.gradle` file (A:\Android Flutter\digital_memory\android/settings.gradle), by a plugin with the id of com.android.application. 
+If you don't see a plugins block, your project was likely created with an older template version. In this case it is most likely defined in the top-level build.gradle file (A:\Android Flutter\digital_memory\android/build.gradle) by the following line in the dependencies block of the buildscript: "classpath 'com.android.tools.build:gradle:<version>'".
+
+Warning: Flutter support for your project's Kotlin version (2.2.20) will soon be dropped. Please upgrade your Kotlin version to a version of at least 2.3.20 soon.
+Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+
+Potential fix: Your project's KGP version is typically defined in the plugins block of the `settings.gradle` file (A:\Android Flutter\digital_memory\android/settings.gradle), by a plugin with the id of org.jetbrains.kotlin.android. 
+If you don't see a plugins block, your project was likely created with an older template version, in which case it is most likely defined in the top-level build.gradle file (A:\Android Flutter\digital_memory\android/build.gradle) by the ext.kotlin_version property.
+
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+C:\Users\Isa\AppData\Local\Pub\Cache\hosted\pub.dev\video_player_android-2.8.22\android\src\main\java\io\flutter\plugins\videoplayer\VideoPlayerEventCallbacks.java:22: warning: onListen(Object,PigeonEventSink<PlatformVideoEvent>) in <anonymous io.flutter.plugins.videoplayer.VideoPlayerEventCallbacks$1> overrides onListen(Object,PigeonEventSink<PlatformVideoEvent>) in VideoEventsStreamHandler; overridden method is a bridge method
+          public void onListen(
+                      ^
+C:\Users\Isa\AppData\Local\Pub\Cache\hosted\pub.dev\video_player_android-2.8.22\android\src\main\java\io\flutter\plugins\videoplayer\VideoPlayerEventCallbacks.java:28: warning: onCancel(Object) in <anonymous io.flutter.plugins.videoplayer.VideoPlayerEventCallbacks$1> overrides onCancel(Object) in VideoEventsStreamHandler; overridden method is a bridge method
+          public void onCancel(Object arguments) {
+                      ^
+2 warnings
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: C:\Users\Isa\AppData\Local\Pub\Cache\hosted\pub.dev\video_thumbnail-0.5.6\android\src\main\java\xyz\justsoft\video_thumbnail\VideoThumbnailPlugin.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: C:\Users\Isa\AppData\Local\Pub\Cache\hosted\pub.dev\video_thumbnail-0.5.6\android\src\main\java\xyz\justsoft\video_thumbnail\VideoThumbnailPlugin.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+3 warnings
+Running Gradle task 'assembleDebug'...                            548.5s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...           6.5s
+I/FlutterActivityAndFragmentDelegate(17424): If you are attempting to set --enable-dart-profiling via Intent extras to launch a Flutter component outside of using the Flutter CLI, note that support for setting engine flags on Android via Intent will soon be dropped; see https://github.com/flutter/flutter/issues/180686 for more information on this breaking change. To migrate, set --enable-dart-profiling or any other flags specified via Intent extras on the command line instead or see https://github.com/flutter/flutter/blob/main/docs/engine/Flutter-Android-Engine-Flags.md for alternative methods.
+D/FlutterJNI(17424): Beginning load of flutter...
+D/FlutterJNI(17424): flutter (null) was loaded normally!
+I/flutter (17424): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer(17424): Width is zero. 0,0
+Syncing files to device sdk gphone64 x86 64...                  
+I/Choreographer(17424): Skipped 219 frames!  The application may be doing too much work on its main thread.
+I/WindowExtensionsImpl(17424): Initializing Window Extensions, vendor API level=6, activity embedding enabled=true
+I/.digital_memory(17424): Compiler allocated 5174KB to compile void android.view.ViewRootImpl.performTraversals()
+D/FlutterRenderer(17424): Width is zero. 0,0
+I/.digital_memory(17424): Compiler allocated 5417KB to compile void android.view.ViewRootImpl.performTraversals()
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+W/HWUI    (17424): Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+W/HWUI    (17424): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+I/Gralloc4(17424): mapper 4.x is not supported
+I/flutter (17424): dynamic_color: Core palette detected.
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+I/Choreographer(17424): Skipped 133 frames!  The application may be doing too much work on its main thread.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/HWUI    (17424): Davey! duration=2341ms; Flags=1, FrameTimelineVsyncId=538560, IntendedVsync=6937638179938, Vsync=6939854846516, InputEventId=0, HandleInputStart=6939869438000, AnimationStart=6939869459700, PerformTraversalsStart=6939869603200, DrawStart=6939890702600, FrameDeadline=6937654846604, FrameInterval=6939868417200, FrameStartTime=16666666, SyncQueued=6939899981700, SyncStart=6939901618300, IssueDrawCommandsStart=6939904445200, SwapBuffers=6939921231200, FrameCompleted=6939981149100, DequeueBufferDuration=55190900, QueueBufferDuration=944200, GpuCompleted=6939938985800, SwapBuffersCompleted=6939981149100, DisplayPresentTime=1979367233486367899, CommandSubmissionCompleted=6939921231200, 
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=230.64ms min=120.20ms max=357.93ms count=6
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+Syncing files to device sdk gphone64 x86 64...                      5.6s
+
+Flutter run key commands.
+r Hot reload. 
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone64 x86 64 is available at: http://127.0.0.1:64375/0753zuUD39c=/
+The Flutter DevTools debugger and profiler on sdk gphone64 x86 64 is available at: http://127.0.0.1:64375/0753zuUD39c=/devtools/?uri=ws://127.0.0.1:64375/0753zuUD39c=/ws
+D/EGL_emulation(17424): app_time_stats: avg=9505.42ms min=75.36ms max=28028.40ms count=3
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/VRI[MainActivity](17424): visibilityChanged oldVisibility=true newVisibility=false
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=334.95ms min=35.90ms max=1049.23ms count=5
+D/EGL_emulation(17424): app_time_stats: avg=7204.63ms min=7204.63ms max=7204.63ms count=1
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   new FlutterSoundRecorder (package:flutter_sound/public/flutter_sound_recorder.dart:231:13)
+I/flutter (17424): │ #1   new _NoteEditorScreenState (package:digital_memory/presentation/views/note_editor/note_editor_screen.dart:57:48)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 ctor: FlutterSoundRecorder()
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+D/EGL_emulation(17424): app_time_stats: avg=505.29ms min=2.36ms max=7816.52ms count=16
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.openRecorder (package:flutter_sound/public/flutter_sound_recorder.dart:474:13)
+I/flutter (17424): │ #1   _NoteEditorScreenState._initRecorder (package:digital_memory/presentation/views/note_editor/note_editor_screen.dart:265:23)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:---> openRecorder 
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._openAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:483:13)
+I/flutter (17424): │ #1   FlutterSoundRecorder.openRecorder.<anonymous closure> (package:flutter_sound/public/flutter_sound_recorder.dart:476:11)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 ---> _openAudioSession
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._openAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:507:17)
+I/flutter (17424): │ #1   FlutterSoundRecorder.openRecorder.<anonymous closure> (package:flutter_sound/public/flutter_sound_recorder.dart:476:11)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 Resetting flutter_sound Recorder Plugin
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.openRecorder (package:flutter_sound/public/flutter_sound_recorder.dart:478:13)
+I/flutter (17424): │ #1   <asynchronous suspension>
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:<--- openAudioSession 
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.openRecorderCompleted (package:flutter_sound/public/flutter_sound_recorder.dart:276:13)
+I/flutter (17424): │ #1   MethodChannelFlutterSoundRecorder.channelMethodCallHandler.<anonymous closure> (package:flutter_sound_platform_interface/method_channel_flutter_sound_recorder.dart:155:24)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 ---> openRecorderCompleted: true
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.openRecorderCompleted (package:flutter_sound/public/flutter_sound_recorder.dart:287:13)
+I/flutter (17424): │ #1   MethodChannelFlutterSoundRecorder.channelMethodCallHandler.<anonymous closure> (package:flutter_sound_platform_interface/method_channel_flutter_sound_recorder.dart:155:24)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 <--- openRecorderCompleted: true
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._openAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:523:13)
+I/flutter (17424): │ #1   <asynchronous suspension>
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 <--- _openAudioSession
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/ImeTracker(17424): com.example.digital_memory:d062e5b4: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F....ID 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/EGL_emulation(17424): app_time_stats: avg=2960.26ms min=282.24ms max=8061.81ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=13030.49ms min=103.01ms max=25957.96ms count=2
+I/AssistStructure(17424): Flattened final assist data: 520 bytes, containing 1 windows, 3 views
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+D/EGL_emulation(17424): app_time_stats: avg=341.02ms min=124.37ms max=533.17ms count=4
+D/EGL_emulation(17424): app_time_stats: avg=532.81ms min=455.56ms max=610.05ms count=2
+D/InsetsController(17424): show(ime(), fromIme=true)
+W/InteractionJankMonitor(17424): Initializing without READ_DEVICE_CONFIG permission. enabled=false, interval=1, missedFrameThreshold=3, frameTimeThreshold=64, package=com.example.digital_memory
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=2800.64ms min=2800.64ms max=2800.64ms count=1
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:d062e5b4: onShown
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=113.95ms min=44.91ms max=441.34ms count=9
+D/InsetsController(17424): hide(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=143.50ms min=26.15ms max=676.02ms count=8
+I/ImeTracker(17424): com.example.digital_memory:14051e3c: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:d9ebcd01: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_ON_ANIMATION_STATE_CHANGED fromUser false
+I/ImeTracker(17424): com.google.android.inputmethod.latin:5a46ca37: onHidden
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=245.74ms min=20.92ms max=1467.78ms count=9
+D/EGL_emulation(17424): app_time_stats: avg=753.09ms min=9.39ms max=6528.95ms count=9
+I/ImeTracker(17424): com.example.digital_memory:cb65f56e: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+D/InsetsController(17424): show(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=2260.68ms min=22.13ms max=8873.67ms count=4
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:cb65f56e: onShown
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=104.46ms min=25.32ms max=496.86ms count=14
+D/EGL_emulation(17424): app_time_stats: avg=501.11ms min=497.63ms max=504.59ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.43ms min=496.73ms max=504.14ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=498.76ms min=496.04ms max=500.66ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=505.25ms min=501.77ms max=508.73ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=501.15ms min=490.37ms max=511.92ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.96ms min=484.48ms max=518.23ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=494.30ms min=481.38ms max=501.25ms count=3
+I/ImeTracker(17424): com.example.digital_memory:9dd61d35: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+I/ImeTracker(17424): com.example.digital_memory:4b120aaf: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InsetsController(17424): show(ime(), fromIme=true)
+I/ImeTracker(17424): com.example.digital_memory:9dd61d35: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+D/InsetsController(17424): show(ime(), fromIme=true)
+I/ImeTracker(17424): com.example.digital_memory:4b120aaf: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+D/EGL_emulation(17424): app_time_stats: avg=202.64ms min=41.37ms max=508.91ms count=5
+I/ImeTracker(17424): com.example.digital_memory:298add54: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+D/InsetsController(17424): hide(ime(), fromIme=true)
+D/EGL_emulation(17424): app_time_stats: avg=48.48ms min=12.78ms max=276.88ms count=21
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=710.00ms min=2.34ms max=11140.88ms count=16
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:4a476ff2: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_ON_ANIMATION_STATE_CHANGED fromUser false
+I/ImeTracker(17424): com.example.digital_memory:298add54: onHidden
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:ba4fe756: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+D/EGL_emulation(17424): app_time_stats: avg=537.03ms min=8.79ms max=6029.58ms count=12
+D/InsetsController(17424): show(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=385.60ms min=1.91ms max=6310.04ms count=17
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:ba4fe756: onShown
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=96.18ms min=22.10ms max=491.97ms count=14
+D/VRI[MainActivity](17424): visibilityChanged oldVisibility=true newVisibility=false
+D/InsetsController(17424): hide(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.google.android.documentsui:7c823b4f: onCancelled at PHASE_CLIENT_ANIMATION_CANCEL
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:987f77e9: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_ON_ANIMATION_STATE_CHANGED fromUser false
+I/ImeTracker(17424): com.example.digital_memory:987f77e9: onFailed at PHASE_CLIENT_VIEW_SERVED
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=218.64ms min=21.07ms max=534.22ms count=9
+D/EGL_emulation(17424): app_time_stats: avg=71.95ms min=11.31ms max=499.01ms count=14
+D/EGL_emulation(17424): app_time_stats: avg=500.16ms min=494.09ms max=506.23ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.60ms min=499.08ms max=502.12ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.49ms min=499.11ms max=501.86ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.70ms min=499.93ms max=501.47ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=498.47ms min=497.23ms max=499.28ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.73ms min=497.42ms max=504.04ms count=2
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/talkback/talkback.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '/vendor/overlay/EmulatorTalkBackOverlay/EmulatorTalkBackOverlay.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~1ctXV3-oSWcKQSIVk4LNwA==/com.google.android.googlequicksearchbox-QwE-5ZZMAZs5IBLUiV9HAA==/base.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~1ctXV3-oSWcKQSIVk4LNwA==/com.google.android.googlequicksearchbox-QwE-5ZZMAZs5IBLUiV9HAA==/split_config.xxhdpi.apk' with 1 weak references
+I/ImeTracker(17424): com.example.digital_memory:41031211: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+D/EGL_emulation(17424): app_time_stats: avg=169.27ms min=20.38ms max=501.62ms count=6
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:549:13)
+I/flutter (17424): │ #1   FlutterSoundRecorder.closeRecorder.<anonymous closure> (package:flutter_sound/public/flutter_sound_recorder.dart:544:14)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:---> _closeAudioSession 
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._stop (package:flutter_sound/public/flutter_sound_recorder.dart:913:13)
+I/flutter (17424): │ #1   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:558:13)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:---> _stop
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.stopRecorderCompleted (package:flutter_sound/public/flutter_sound_recorder.dart:342:13)
+I/flutter (17424): │ #1   MethodChannelFlutterSoundRecorder.channelMethodCallHandler.<anonymous closure> (package:flutter_sound_platform_interface/method_channel_flutter_sound_recorder.dart:135:24)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 ---> stopRecorderCompleted: true
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.stopRecorderCompleted (package:flutter_sound/public/flutter_sound_recorder.dart:354:13)
+I/flutter (17424): │ #1   MethodChannelFlutterSoundRecorder.channelMethodCallHandler.<anonymous closure> (package:flutter_sound_platform_interface/method_channel_flutter_sound_recorder.dart:135:24)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 <---- stopRecorderCompleted: true
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._stop (package:flutter_sound/public/flutter_sound_recorder.dart:928:13)
+I/flutter (17424): │ #1   <asynchronous suspension>
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:<--- _stop
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:583:13)
+I/flutter (17424): │ #1   <asynchronous suspension>
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:<--- _closeAudioSession 
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+D/EGL_emulation(17424): app_time_stats: avg=196.40ms min=20.99ms max=943.96ms count=7
+D/EGL_emulation(17424): app_time_stats: avg=10008.08ms min=10008.08ms max=10008.08ms count=1
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   new FlutterSoundRecorder (package:flutter_sound/public/flutter_sound_recorder.dart:231:13)
+I/flutter (17424): │ #1   new _NoteEditorScreenState (package:digital_memory/presentation/views/note_editor/note_editor_screen.dart:57:48)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 ctor: FlutterSoundRecorder()
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.openRecorder (package:flutter_sound/public/flutter_sound_recorder.dart:474:13)
+I/flutter (17424): │ #1   _NoteEditorScreenState._initRecorder (package:digital_memory/presentation/views/note_editor/note_editor_screen.dart:265:23)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:---> openRecorder 
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._openAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:483:13)
+I/flutter (17424): │ #1   FlutterSoundRecorder.openRecorder.<anonymous closure> (package:flutter_sound/public/flutter_sound_recorder.dart:476:11)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 ---> _openAudioSession
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+D/EGL_emulation(17424): app_time_stats: avg=1701.04ms min=38.01ms max=8109.61ms count=5
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.openRecorder (package:flutter_sound/public/flutter_sound_recorder.dart:478:13)
+I/flutter (17424): │ #1   <asynchronous suspension>
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:<--- openAudioSession 
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.openRecorderCompleted (package:flutter_sound/public/flutter_sound_recorder.dart:276:13)
+I/flutter (17424): │ #1   MethodChannelFlutterSoundRecorder.channelMethodCallHandler.<anonymous closure> (package:flutter_sound_platform_interface/method_channel_flutter_sound_recorder.dart:155:24)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 ---> openRecorderCompleted: true
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.openRecorderCompleted (package:flutter_sound/public/flutter_sound_recorder.dart:287:13)
+I/flutter (17424): │ #1   MethodChannelFlutterSoundRecorder.channelMethodCallHandler.<anonymous closure> (package:flutter_sound_platform_interface/method_channel_flutter_sound_recorder.dart:155:24)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 <--- openRecorderCompleted: true
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._openAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:523:13)
+I/flutter (17424): │ #1   <asynchronous suspension>
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 <--- _openAudioSession
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+D/EGL_emulation(17424): app_time_stats: avg=1317.34ms min=40.90ms max=5829.08ms count=5
+D/EGL_emulation(17424): app_time_stats: avg=111.77ms min=3.53ms max=2095.53ms count=23
+I/ImeTracker(17424): com.example.digital_memory:e0df598a: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F....ID 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+I/ImeTracker(17424): com.example.digital_memory:2d1998de: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F....ID 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/EGL_emulation(17424): app_time_stats: avg=20192.37ms min=768.33ms max=39616.40ms count=2
+I/AssistStructure(17424): Flattened final assist data: 516 bytes, containing 1 windows, 3 views
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:549:13)
+I/flutter (17424): │ #1   FlutterSoundRecorder.closeRecorder.<anonymous closure> (package:flutter_sound/public/flutter_sound_recorder.dart:544:14)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:---> _closeAudioSession 
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._stop (package:flutter_sound/public/flutter_sound_recorder.dart:913:13)
+I/flutter (17424): │ #1   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:558:13)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:---> _stop
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.stopRecorderCompleted (package:flutter_sound/public/flutter_sound_recorder.dart:342:13)
+I/flutter (17424): │ #1   MethodChannelFlutterSoundRecorder.channelMethodCallHandler.<anonymous closure> (package:flutter_sound_platform_interface/method_channel_flutter_sound_recorder.dart:135:24)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 ---> stopRecorderCompleted: true
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder.stopRecorderCompleted (package:flutter_sound/public/flutter_sound_recorder.dart:354:13)
+I/flutter (17424): │ #1   MethodChannelFlutterSoundRecorder.channelMethodCallHandler.<anonymous closure> (package:flutter_sound_platform_interface/method_channel_flutter_sound_recorder.dart:135:24)
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 <---- stopRecorderCompleted: true
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._stop (package:flutter_sound/public/flutter_sound_recorder.dart:928:13)
+I/flutter (17424): │ #1   <asynchronous suspension>
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:<--- _stop
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+I/flutter (17424): │ #0   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:583:13)
+I/flutter (17424): │ #1   <asynchronous suspension>
+I/flutter (17424): ├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+I/flutter (17424): │ 🐛 FS:<--- _closeAudioSession 
+I/flutter (17424): └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+D/EGL_emulation(17424): app_time_stats: avg=41.10ms min=5.54ms max=151.00ms count=24
+D/InsetsController(17424): show(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:2d1998de: onShown
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=22.86ms min=3.50ms max=218.88ms count=48
+D/EGL_emulation(17424): app_time_stats: avg=16.90ms min=10.05ms max=26.90ms count=59
+D/EGL_emulation(17424): app_time_stats: avg=16.59ms min=7.15ms max=28.50ms count=61
+D/EGL_emulation(17424): app_time_stats: avg=5.54ms min=1.90ms max=30.40ms count=59
+D/EGL_emulation(17424): app_time_stats: avg=7.41ms min=1.67ms max=42.07ms count=59
+D/EGL_emulation(17424): app_time_stats: avg=4.63ms min=1.75ms max=16.57ms count=60
+D/EGL_emulation(17424): app_time_stats: avg=13.33ms min=1.91ms max=31.61ms count=57
+D/EGL_emulation(17424): app_time_stats: avg=15.82ms min=3.58ms max=24.16ms count=60
+D/EGL_emulation(17424): app_time_stats: avg=5.70ms min=1.66ms max=22.96ms count=59
+D/EGL_emulation(17424): app_time_stats: avg=9.31ms min=2.36ms max=29.38ms count=58
+I/ImeTracker(17424): com.example.digital_memory:97d52269: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+D/InsetsController(17424): hide(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=545.47ms min=1.42ms max=10189.91ms count=20
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:c1a3fd27: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_ON_ANIMATION_STATE_CHANGED fromUser false
+I/ImeTracker(17424): com.example.digital_memory:97d52269: onHidden
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=414.81ms min=2.57ms max=9298.01ms count=24
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=327.38ms min=6.94ms max=6642.16ms count=22
+D/EGL_emulation(17424): app_time_stats: avg=627.62ms min=11.77ms max=9604.75ms count=16
+D/EGL_emulation(17424): app_time_stats: avg=971.45ms min=17.09ms max=10221.95ms count=11
+D/EGL_emulation(17424): app_time_stats: avg=171.38ms min=9.24ms max=2143.78ms count=15
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=385.87ms min=5.02ms max=7768.25ms count=21
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=1391.48ms min=3.33ms max=13603.83ms count=10
+I/ImeTracker(17424): com.example.digital_memory:ede15ed8: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+I/AssistStructure(17424): Flattened final assist data: 432 bytes, containing 1 windows, 3 views
+D/InsetsController(17424): show(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=5756.10ms min=3.00ms max=62947.05ms count=11
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=120.28ms min=25.73ms max=299.54ms count=9
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.google.android.inputmethod.latin:a318fdea: onShown
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=62.62ms min=10.68ms max=284.38ms count=16
+D/EGL_emulation(17424): app_time_stats: avg=56.09ms min=8.05ms max=496.52ms count=20
+D/EGL_emulation(17424): app_time_stats: avg=500.62ms min=499.53ms max=502.55ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=501.30ms min=497.77ms max=504.82ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.35ms min=497.45ms max=502.10ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=499.93ms min=497.89ms max=502.94ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.78ms min=496.04ms max=505.51ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=498.40ms min=496.19ms max=499.83ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=372.09ms min=116.72ms max=501.17ms count=3
+I/ImeTracker(17424): com.example.digital_memory:40f335ae: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+D/InsetsController(17424): hide(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=1287.97ms min=17.56ms max=11225.93ms count=9
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:4b2199a5: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_ON_ANIMATION_STATE_CHANGED fromUser false
+I/ImeTracker(17424): com.example.digital_memory:40f335ae: onHidden
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:ade5aa2: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/EGL_emulation(17424): app_time_stats: avg=430.41ms min=9.60ms max=10986.39ms count=27
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+I/AssistStructure(17424): Flattened final assist data: 504 bytes, containing 1 windows, 3 views
+D/InsetsController(17424): show(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=631.06ms min=1.61ms max=11833.05ms count=19
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:ade5aa2: onShown
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=62.85ms min=16.94ms max=355.49ms count=16
+I/.digital_memory(17424): Background concurrent mark compact GC freed 3748KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 3823KB/7646KB, paused 2.231ms,5.032ms total 163.156ms
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/talkback/talkback.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '/vendor/overlay/EmulatorTalkBackOverlay/EmulatorTalkBackOverlay.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~1ctXV3-oSWcKQSIVk4LNwA==/com.google.android.googlequicksearchbox-QwE-5ZZMAZs5IBLUiV9HAA==/base.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~1ctXV3-oSWcKQSIVk4LNwA==/com.google.android.googlequicksearchbox-QwE-5ZZMAZs5IBLUiV9HAA==/split_config.xxhdpi.apk' with 1 weak references
+I/ImeTracker(17424): com.example.digital_memory:b9ad366b: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+I/AssistStructure(17424): Flattened final assist data: 440 bytes, containing 1 windows, 3 views
+D/InsetsController(17424): show(ime(), fromIme=true)
+I/ImeTracker(17424): com.example.digital_memory:b9ad366b: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+D/EGL_emulation(17424): app_time_stats: avg=125.76ms min=18.20ms max=499.98ms count=11
+D/EGL_emulation(17424): app_time_stats: avg=500.70ms min=497.64ms max=504.11ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=499.05ms min=496.17ms max=501.80ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.00ms min=499.15ms max=500.52ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=499.86ms min=496.73ms max=502.69ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.85ms min=497.95ms max=503.76ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.29ms min=496.71ms max=503.15ms count=3
+I/ImeTracker(17424): com.example.digital_memory:462ad698: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+D/EGL_emulation(17424): app_time_stats: avg=572.58ms min=497.69ms max=722.33ms count=3
+D/InsetsController(17424): hide(ime(), fromIme=true)
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=669.13ms min=7.37ms max=11762.36ms count=18
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:f66999d4: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_ON_ANIMATION_STATE_CHANGED fromUser false
+I/ImeTracker(17424): com.example.digital_memory:462ad698: onHidden
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=243.23ms min=21.57ms max=1976.81ms count=10
+D/EGL_emulation(17424): app_time_stats: avg=606.16ms min=4.74ms max=9761.19ms count=17
+D/EGL_emulation(17424): app_time_stats: avg=492.25ms min=2.66ms max=15298.71ms count=32
+D/EGL_emulation(17424): app_time_stats: avg=83.59ms min=3.31ms max=2597.61ms count=37
+D/EGL_emulation(17424): app_time_stats: avg=203.88ms min=3.55ms max=9123.37ms count=48
+D/EGL_emulation(17424): app_time_stats: avg=509.01ms min=13.27ms max=9052.06ms count=19
+D/EGL_emulation(17424): app_time_stats: avg=117.07ms min=3.27ms max=3658.26ms count=34
+D/EGL_emulation(17424): app_time_stats: avg=4456.50ms min=4456.50ms max=4456.50ms count=1
+D/EGL_emulation(17424): app_time_stats: avg=770.13ms min=13.79ms max=24040.81ms count=32
+D/EGL_emulation(17424): app_time_stats: avg=121.04ms min=10.51ms max=1838.65ms count=20
+D/EGL_emulation(17424): app_time_stats: avg=1122.92ms min=14.37ms max=6618.94ms count=6
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=217.26ms min=13.55ms max=1972.47ms count=11
+D/EGL_emulation(17424): app_time_stats: avg=255.25ms min=2.06ms max=8287.57ms count=34
+D/EGL_emulation(17424): app_time_stats: avg=97.45ms min=3.08ms max=1971.83ms count=23
+
+══╡ EXCEPTION CAUGHT BY RENDERING LIBRARY ╞═════════════════════════════════════════════════════════
+The following assertion was thrown during layout:
+A RenderFlex overflowed by 16 pixels on the bottom.
+
+The relevant error-causing widget was:
+  Column
+  Column:file:///A:/Android%20Flutter/digital_memory/lib/presentation/views/schedule/schedule_tab.dart:1714:22
+
+To inspect this widget in Flutter DevTools, visit:
+http://127.0.0.1:64375/0753zuUD39c=/devtools//#/inspector?uri=http%3A%2F%2F127.0.0.1%3A64375%2F0753zuUD39c%3D%2F&inspectorRef=inspector-0
+
+The overflowing RenderFlex has an orientation of Axis.vertical.
+The edge of the RenderFlex that is overflowing has been marked in the rendering with a yellow and
+black striped pattern. This is usually caused by the contents being too big for the RenderFlex.
+Consider applying a flex factor (e.g. using an Expanded widget) to force the children of the
+RenderFlex to fit within the available space instead of being sized to their natural size.
+This is considered an error condition because it indicates that there is content that cannot be
+seen. If the content is legitimately bigger than the available space, consider clipping it with a
+ClipRect widget before putting it in the flex, or using a scrollable container rather than a Flex,
+like a ListView.
+The specific RenderFlex in question is: RenderFlex#1ea2e OVERFLOWING:
+  creator: Column ← Padding ← LayoutBuilder ← SizedBox ← DefaultTextStyle ← AnimatedDefaultTextStyle ←
+    _InkFeatures-[GlobalKey#ff700 ink renderer] ← NotificationListener<LayoutChangedNotification> ←
+    CustomPaint ← _ShapeBorderPaint ← PhysicalShape ← _MaterialInterior ← ⋯
+  parentData: offset=Offset(10.0, 10.0) (can use size)
+  constraints: BoxConstraints(w=277.4, h=44.0)
+  size: Size(277.4, 44.0)
+  direction: vertical
+  mainAxisAlignment: start
+  mainAxisSize: max
+  crossAxisAlignment: start
+  textDirection: ltr
+  verticalDirection: down
+  spacing: 0.0
+◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+D/EGL_emulation(17424): app_time_stats: avg=1340.94ms min=14.54ms max=16819.57ms count=13
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/talkback/talkback.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '/vendor/overlay/EmulatorTalkBackOverlay/EmulatorTalkBackOverlay.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~1ctXV3-oSWcKQSIVk4LNwA==/com.google.android.googlequicksearchbox-QwE-5ZZMAZs5IBLUiV9HAA==/base.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~1ctXV3-oSWcKQSIVk4LNwA==/com.google.android.googlequicksearchbox-QwE-5ZZMAZs5IBLUiV9HAA==/split_config.xxhdpi.apk' with 1 weak references
+I/ImeTracker(17424): com.example.digital_memory:1607deb8: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/EGL_emulation(17424): app_time_stats: avg=820.75ms min=7.69ms max=10431.95ms count=13
+I/AssistStructure(17424): Flattened final assist data: 488 bytes, containing 1 windows, 3 views
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+D/InsetsController(17424): show(ime(), fromIme=true)
+D/EGL_emulation(17424): app_time_stats: avg=155.90ms min=16.15ms max=463.57ms count=7
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=8553.69ms min=1.11ms max=136636.59ms count=16
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.google.android.inputmethod.latin:773719bf: onShown
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=77.93ms min=16.43ms max=306.22ms count=13
+I/ImeTracker(17424): com.example.digital_memory:7ff47e0f: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+D/InsetsController(17424): hide(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=86.54ms min=2.83ms max=712.15ms count=11
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:8befb1ea: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT_ON_ANIMATION_STATE_CHANGED fromUser false
+I/ImeTracker(17424): com.example.digital_memory:7ff47e0f: onHidden
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=740.06ms min=29.68ms max=9192.16ms count=13
+D/EGL_emulation(17424): app_time_stats: avg=246.64ms min=11.37ms max=6389.74ms count=28
+D/EGL_emulation(17424): app_time_stats: avg=1179.57ms min=7.10ms max=7882.84ms count=7
+D/EGL_emulation(17424): app_time_stats: avg=442.03ms min=2.82ms max=9426.18ms count=22
+D/EGL_emulation(17424): app_time_stats: avg=140.90ms min=6.01ms max=2320.01ms count=19
+D/EGL_emulation(17424): app_time_stats: avg=280.36ms min=11.41ms max=7639.27ms count=29
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=473.28ms min=24.32ms max=2000.19ms count=5
+D/EGL_emulation(17424): app_time_stats: avg=70.82ms min=3.04ms max=2407.91ms count=38
+D/EGL_emulation(17424): app_time_stats: avg=545.02ms min=3.85ms max=15951.97ms count=30
+D/EGL_emulation(17424): app_time_stats: avg=231.59ms min=10.42ms max=2569.41ms count=12
+D/EGL_emulation(17424): app_time_stats: avg=15.93ms min=3.11ms max=103.88ms count=49
+D/EGL_emulation(17424): app_time_stats: avg=3319.46ms min=4.21ms max=13257.23ms count=4
+D/EGL_emulation(17424): app_time_stats: avg=1470.98ms min=2.26ms max=27488.27ms count=19
+D/FilePickerUtils(17424): Custom file types are [zip]. The mime types were detected as [application/zip].
+D/EGL_emulation(17424): app_time_stats: avg=474.54ms min=5.11ms max=2753.49ms count=6
+D/EGL_emulation(17424): app_time_stats: avg=65.41ms min=5.97ms max=683.38ms count=18
+D/VRI[MainActivity](17424): visibilityChanged oldVisibility=true newVisibility=false
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=243.45ms min=5.90ms max=2278.17ms count=11
+D/EGL_emulation(17424): app_time_stats: avg=82.93ms min=3.11ms max=1321.88ms count=19
+D/EGL_emulation(17424): app_time_stats: avg=113.79ms min=17.61ms max=720.19ms count=9
+D/EGL_emulation(17424): app_time_stats: avg=2324.25ms min=4.68ms max=32325.15ms count=14
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=109.08ms min=5.66ms max=2169.69ms count=24
+D/EGL_emulation(17424): app_time_stats: avg=239.44ms min=13.66ms max=2011.02ms count=10
+D/EGL_emulation(17424): app_time_stats: avg=13.93ms min=2.88ms max=47.45ms count=55
+D/FilePickerUtils(17424): Custom file types are [zip]. The mime types were detected as [application/zip].
+D/EGL_emulation(17424): app_time_stats: avg=1045.95ms min=2.36ms max=6259.93ms count=6
+D/VRI[MainActivity](17424): visibilityChanged oldVisibility=true newVisibility=false
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+D/EGL_emulation(17424): app_time_stats: avg=413.48ms min=2.70ms max=4003.28ms count=10
+D/EGL_emulation(17424): app_time_stats: avg=6526.33ms min=6526.33ms max=6526.33ms count=1
+D/EGL_emulation(17424): app_time_stats: avg=119.91ms min=3.41ms max=2109.19ms count=20
+I/ImeTracker(17424): com.example.digital_memory:f212248c: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F....ID 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+I/ImeTracker(17424): com.example.digital_memory:959d23d4: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F....ID 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/EGL_emulation(17424): app_time_stats: avg=6832.53ms min=97.72ms max=13567.34ms count=2
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+I/AssistStructure(17424): Flattened final assist data: 528 bytes, containing 1 windows, 3 views
+D/InsetsController(17424): show(ime(), fromIme=true)
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=53.53ms min=13.53ms max=378.20ms count=19
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:959d23d4: onShown
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=125.93ms min=22.64ms max=500.01ms count=8
+D/EGL_emulation(17424): app_time_stats: avg=500.85ms min=500.04ms max=501.67ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=498.10ms min=496.04ms max=499.71ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.18ms min=495.46ms max=504.90ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.36ms min=499.83ms max=500.89ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.51ms min=498.89ms max=499.89ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.22ms min=498.62ms max=501.82ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.73ms min=500.59ms max=500.86ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=280.63ms min=9.83ms max=500.36ms count=5
+D/EGL_emulation(17424): app_time_stats: avg=509.79ms min=496.53ms max=531.69ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=489.43ms min=474.58ms max=500.25ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.22ms min=498.69ms max=501.76ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.89ms min=498.30ms max=501.43ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=508.05ms min=501.99ms max=514.12ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=494.59ms min=488.38ms max=500.52ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=507.87ms min=502.38ms max=513.36ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=494.36ms min=485.21ms max=500.09ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=511.27ms min=505.78ms max=516.76ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=492.97ms min=477.73ms max=500.86ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=509.18ms min=499.67ms max=518.69ms count=2
+I/ImeTracker(17424): com.example.digital_memory:3f674cf0: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+D/InsetsController(17424): hide(ime(), fromIme=true)
+W/WindowOnBackDispatcher(17424): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(17424): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+I/ImeTracker(17424): com.example.digital_memory:443427d5: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+I/ImeTracker(17424): com.example.digital_memory:6f1d2a96: onRequestShow at ORIGIN_CLIENT reason SHOW_SOFT_INPUT fromUser false
+D/InputMethodManager(17424): showSoftInput() view=io.flutter.embedding.android.FlutterView{a6dadba VFED..... .F...... 0,0-1080,2400 #2 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=1220.33ms min=1.27ms max=24986.38ms count=21
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+I/AssistStructure(17424): Flattened final assist data: 528 bytes, containing 1 windows, 3 views
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=124.93ms min=33.34ms max=625.11ms count=8
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/InsetsController(17424): show(ime(), fromIme=true)
+I/ImeTracker(17424): com.example.digital_memory:3f674cf0: onCancelled at PHASE_CLIENT_ANIMATION_CANCEL
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/InsetsController(17424): show(ime(), fromIme=true)
+I/ImeTracker(17424): com.example.digital_memory:6f1d2a96: onCancelled at PHASE_CLIENT_APPLY_ANIMATION
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/InputConnectionAdaptor(17424): The input method toggled cursor monitoring on
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/.digital_memory(17424): Background concurrent mark compact GC freed 3593KB AllocSpace bytes, 4(100KB) LOS objects, 49% free, 4038KB/8075KB, paused 2.926ms,2.270ms total 101.083ms
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/talkback/talkback.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '/vendor/overlay/EmulatorTalkBackOverlay/EmulatorTalkBackOverlay.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~1ctXV3-oSWcKQSIVk4LNwA==/com.google.android.googlequicksearchbox-QwE-5ZZMAZs5IBLUiV9HAA==/base.apk' with 1 weak references
+W/.digital_memory(17424): ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~1ctXV3-oSWcKQSIVk4LNwA==/com.google.android.googlequicksearchbox-QwE-5ZZMAZs5IBLUiV9HAA==/split_config.xxhdpi.apk' with 1 weak references
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+I/ImeTracker(17424): com.example.digital_memory:443427d5: onShown
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/FlutterJNI(17424): Sending viewport metrics to the engine.
+D/EGL_emulation(17424): app_time_stats: avg=95.69ms min=25.00ms max=505.03ms count=12
+D/EGL_emulation(17424): app_time_stats: avg=498.12ms min=495.06ms max=500.89ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=501.05ms min=501.02ms max=501.07ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.48ms min=497.56ms max=500.50ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.63ms min=500.28ms max=500.98ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.25ms min=494.65ms max=501.81ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=499.76ms min=494.62ms max=505.21ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.61ms min=496.17ms max=505.06ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=501.45ms min=500.83ms max=502.08ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.09ms min=496.53ms max=501.07ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.33ms min=498.52ms max=502.13ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=147.67ms min=19.51ms max=360.15ms count=7
+D/EGL_emulation(17424): app_time_stats: avg=494.40ms min=479.46ms max=501.90ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=68.12ms min=2.84ms max=500.67ms count=21
+D/EGL_emulation(17424): app_time_stats: avg=500.16ms min=499.91ms max=500.42ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.40ms min=470.43ms max=527.24ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.00ms min=499.66ms max=500.35ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.77ms min=498.63ms max=502.92ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.54ms min=496.12ms max=501.28ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=499.82ms min=498.62ms max=501.04ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.49ms min=498.73ms max=502.25ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.68ms min=495.77ms max=503.09ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=501.15ms min=498.28ms max=504.01ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=498.24ms min=496.04ms max=501.22ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=500.34ms min=498.25ms max=502.44ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.04ms min=496.84ms max=503.25ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=499.77ms min=496.75ms max=502.61ms count=3
+D/EGL_emulation(17424): app_time_stats: avg=499.92ms min=497.91ms max=501.93ms count=2
+D/EGL_emulation(17424): app_time_stats: avg=500.46ms min=498.48ms max=502.43ms count=2
+Lost connection to device.

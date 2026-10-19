@@ -1,0 +1,32 @@
+00:00 +0: loading A:/Android Flutter/digital_memory/test/widget_test.dart
+/C:/Users/Isa/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_quill-11.5.0/lib/src/editor/raw_editor/raw_editor_state.dart:42:7: Error: The non-abstract class 'QuillRawEditorState' is missing implementations for these members:
+ - TextInputClient.onFocusReceived
+Try to either
+ - provide an implementation,
+ - inherit an implementation from a superclass or mixin,
+ - mark the class as abstract, or
+ - provide a 'noSuchMethod' implementation.
+class QuillRawEditorState extends EditorState
+      ^^^^^^^^^^^^^^^^^^^
+/C:/flutter/src/flutter/packages/flutter/lib/src/services/text_input.dart:1401:8: Context: 'TextInputClient.onFocusReceived' is defined here.
+  bool onFocusReceived() => false;
+       ^^^^^^^^^^^^^^^
+00:00 +0 -1: loading A:/Android Flutter/digital_memory/test/widget_test.dart [E]
+  Failed to load "A:/Android Flutter/digital_memory/test/widget_test.dart":
+  Compilation failed for testPath=A:/Android Flutter/digital_memory/test/widget_test.dart: /C:/Users/Isa/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_quill-11.5.0/lib/src/editor/raw_editor/raw_editor_state.dart:42:7: Error: The non-abstract class 'QuillRawEditorState' is missing implementations for these members:
+   - TextInputClient.onFocusReceived
+  Try to either
+   - provide an implementation,
+   - inherit an implementation from a superclass or mixin,
+   - mark the class as abstract, or
+   - provide a 'noSuchMethod' implementation.
+  class QuillRawEditorState extends EditorState
+        ^^^^^^^^^^^^^^^^^^^
+  /C:/flutter/src/flutter/packages/flutter/lib/src/services/text_input.dart:1401:8: Context: 'TextInputClient.onFocusReceived' is defined here.
+    bool onFocusReceived() => false;
+         ^^^^^^^^^^^^^^^
+  .
+00:00 +0 -1: Some tests failed.
+
+Failing tests:
+  A:/Android Flutter/digital_memory/test/widget_test.dart: loading A:/Android Flutter/digital_memory/test/widget_test.dart

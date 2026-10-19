@@ -1,0 +1,21 @@
+{
+  "zip_sha256": "6ed8691bfb2e50efa56fcba1f76c11b394511e2d1b451c390d464bf4374398cf",
+  "entries": [
+    "backup_20261019_170933.json"
+  ],
+  "json_type": "list",
+  "note_count": 1,
+  "note_fields": [
+    "id",
+    "title",
+    "category",
+    "contentJson",
+    "contentPlain",
+    "isLocked",
+    "isPinned",
+    "createdAt",
+    "updatedAt"
+  ],
+  "contains_attachment_file": false,
+  "fixture_note_locked": true
+}

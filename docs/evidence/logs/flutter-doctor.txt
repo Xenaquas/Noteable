@@ -1,0 +1,40 @@
+[√] Flutter (Channel stable, 3.47.5, on Microsoft Windows [Version 10.0.26300.9711], locale en-CA) [1,290ms]
+    • Flutter version 3.47.5 on channel stable at C:\flutter\src\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 6a19cca564 (5 weeks ago), 2026-09-17 14:13:22 -0400
+    • Engine revision af7e796e16
+    • Dart version 3.13.4
+    • DevTools version 2.60.0
+    • Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios, cli-animations, enable-native-assets, enable-record-use, enable-swift-package-manager, omit-legacy-version-file, enable-lldb-debugging, enable-uiscene-migration
+
+[√] Windows Version (Windows 11 or higher, 26H2, 2009) [2.6s]
+
+[!] Android toolchain - develop for Android devices (Android SDK version 36.1.0) [5.7s]
+    • Android SDK at C:\Users\Isa\AppData\Local\Android\Sdk
+    • Emulator version 36.3.10.0 (build_id 14472402) (CL:N/A)
+    • Platform android-36.1, build-tools 36.1.0
+    • ANDROID_HOME = C:\Users\Isa\AppData\Local\Android\Sdk
+    • Java binary at: A:\Android_Studio\jbr\bin\java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment (build 21.0.10+-14961533-b1163.108)
+    ! Some Android licenses not accepted. To resolve this, run: flutter doctor --android-licenses
+
+[√] Chrome - develop for the web [260ms]
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[√] Visual Studio - develop Windows apps (Visual Studio Community 2026 18.4.2) [257ms]
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\18\Community
+    • Visual Studio Community 2026 version 18.4.11620.152
+    • Windows 10 SDK version 10.0.26100.0
+
+[√] Connected device (4 available) [1,377ms]
+    • sdk gphone64 x86 64 (mobile) • emulator-5554 • android-x64    • Android 15 (API 35) (emulator)
+    • Windows (desktop)            • windows       • windows-x64    • Microsoft Windows [Version 10.0.26300.9711]
+    • Chrome (web)                 • chrome        • web-javascript • Google Chrome 155.0.8059.82
+    • Edge (web)                   • edge          • web-javascript • Microsoft Edge 155.0.4283.62
+
+[√] Network resources [1,284ms]
+    • All expected network resources are available.
+
+! Doctor found issues in 1 category.

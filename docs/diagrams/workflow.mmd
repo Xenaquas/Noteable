@@ -1,0 +1,13 @@
+flowchart TD
+ Start[Launch and load preferences] --> Home[Home dashboard]
+ Home --> Notes[Notes tab]
+ Notes --> Edit[Rich text editor and attachments]
+ Edit --> Save[Autosave or explicit save]
+ Save --> Local[Local SQLite and media]
+ Home --> Tasks[Tasks and linked notes]
+ Tasks --> Due[Due date and priority]
+ Due --> Agenda[Schedule calendar and agenda]
+ Home --> Settings[Settings and notifications]
+ Settings --> Backup[ZIP notes export]
+ Backup --> Risk[Restore coverage gaps - see review]
+ Home --> Vault[Locked notes and PIN or biometrics]
