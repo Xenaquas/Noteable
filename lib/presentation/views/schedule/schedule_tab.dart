@@ -992,7 +992,6 @@ class _ScheduleTabState extends ConsumerState<ScheduleTab> {
                     MaterialPageRoute(
                       builder: (_) => NotePreviewScreen(
                         noteId: note.id!,
-                        skipLockCheck: !note.isLocked,
                       ),
                     ),
                   );

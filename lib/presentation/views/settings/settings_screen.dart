@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:local_auth/local_auth.dart';
+import '../../view_models/di.dart';
 
 import '../../../core/services/backup_service.dart';
 import '../../../domain/entities/note_entity.dart';
@@ -35,29 +35,8 @@ class SettingsScreen extends ConsumerStatefulWidget {
 }
 
 class _SettingsScreenState extends ConsumerState<SettingsScreen> {
-  final LocalAuthentication auth = LocalAuthentication();
-  bool _canCheckBiometrics = false;
   String _voice = 'Ryan (US)';
   String _autoBackup = 'Off';
-
-  @override
-  void initState() {
-    super.initState();
-    _checkBiometrics();
-  }
-
-  Future<void> _checkBiometrics() async {
-    try {
-      final canCheck = await auth.canCheckBiometrics;
-      final isDeviceSupported = await auth.isDeviceSupported();
-      if (!mounted) return;
-      setState(() {
-        _canCheckBiometrics = canCheck && isDeviceSupported;
-      });
-    } catch (_) {
-      if (mounted) setState(() => _canCheckBiometrics = false);
-    }
-  }
 
   void _showNotificationChannelsSheet(BuildContext context) {
     showModalBottomSheet<void>(
@@ -226,25 +205,18 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                 _SectionHeader(label: 'Privacy & Security'),
                 _GroupCard(
                   children: [
-                    if (_canCheckBiometrics)
-                      _SwitchTile(
-                        icon: Icons.fingerprint,
-                        title: 'App Lock (Biometric)',
-                        value: settings.isBiometricEnabled,
-                        onChanged: (v) async {
-                          if (v) {
-                            final didAuthenticate = await auth.authenticate(
-                              localizedReason:
-                                  'Please authenticate to enable biometric lock',
-                            );
-                            if (didAuthenticate) {
-                              vm.setBiometricEnabled(true);
-                            }
-                          } else {
-                            vm.setBiometricEnabled(false);
-                          }
-                        },
-                      ),
+                    _SwitchTile(
+                      icon: Icons.lock_outline,
+                      title: 'App Lock (PIN / device)',
+                      value: settings.isBiometricEnabled,
+                      onChanged: (enabled) async {
+                        final lock = ref.read(lockServiceProvider);
+                        final ok = enabled
+                            ? await lock.configureAppProtection(context)
+                            : await lock.authenticate(context: context, reason: 'Disable app lock');
+                        if (ok) await vm.setBiometricEnabled(enabled);
+                      },
+                    ),
                     _ActionTile(
                       icon: Icons.timer_outlined,
                       title: 'Auto-lock Timer',
@@ -366,6 +338,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   Future<void> _handleExportAll() async {
     try {
+      final notes = await ref.read(noteRepoProvider).listNotes();
+      if (notes.any((note) => note.isLocked)) {
+        _showSnack('Backup with private notes is unavailable until encrypted backup is implemented.');
+        return;
+      }
       await ref.read(backupServiceProvider).exportAllNotes();
       _showSnack('Export successful');
     } catch (e) {
@@ -384,7 +361,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
   Future<void> _handleExportSingleNote() async {
     try {
-      final notes = await ref.read(backupServiceProvider).listNotes();
+      final notes = (await ref.read(backupServiceProvider).listNotes())
+          .where((note) => !note.isLocked).toList();
       if (!mounted) return;
       if (notes.isEmpty) {
         _showSnack('No notes to export yet.');

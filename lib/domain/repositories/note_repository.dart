@@ -1,9 +1,12 @@
 import '../entities/attachment_entity.dart';
 import '../entities/note_entity.dart';
+import '../../core/services/note_authorization.dart';
 
 abstract class NoteRepository {
   Future<int> createEmptyNote({String category = 'Personal'});
-  Future<NoteEntity?> getNote(int id);
+  Future<bool> isNoteLocked(int id);
+  Future<NoteEntity?> getNote(int id, {NoteOperation operation = NoteOperation.read});
+  Future<NoteEntity?> getNoteSummary(int id);
   Future<List<NoteEntity>> listNotes();
   Future<List<NoteEntity>> searchNotes(String query);
   Future<int> upsert(NoteEntity note);

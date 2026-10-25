@@ -1,0 +1,5 @@
+00:00 +0: loading A:/Android Flutter/digital_memory/test/privacy_routes_test.dart
+00:00 +0: (setUpAll)
+00:04 +0: revoking an open PIN prompt permits fresh root authentication
+00:10 +1: (tearDownAll)
+00:10 +1: All tests passed!

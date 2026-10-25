@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../domain/entities/attachment_entity.dart';
 import '../../../domain/entities/note_entity.dart';
+import '../../../core/services/note_authorization.dart';
 import '../../view_models/home_vm.dart';
 import '../../widgets/note_card.dart';
 import '../note_preview/note_preview_screen.dart';
@@ -223,13 +224,16 @@ class OpenContainerWrapper extends ConsumerWidget {
             builder: (_) => NotePreviewScreen(
               noteId: note.id!,
               heroTag: heroTag,
-              skipLockCheck: true,
             ),
           ),
         );
       },
       onLongPress: () async {
         final repo = ref.read(noteRepoProvider);
+        if (!await ref.read(lockServiceProvider).authorizeNote(context: context,
+            noteId: note.id!, operation: NoteOperation.edit)) {
+          return;
+        }
         final updated = note.copyWith(isPinned: !note.isPinned);
         await repo.upsert(updated);
         await ref.read(homeVmProvider).loadNotes();

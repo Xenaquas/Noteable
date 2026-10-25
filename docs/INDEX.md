@@ -6,6 +6,7 @@
 
 | Read | What it answers |
 |---|---|
+| [Phase A privacy repair](PHASE_A_SECURITY_REVIEW.md) | Security changes, regression results, preservation incident and release gate after the original audit |
 | [Current Status](CURRENT_STATUS.md) | Does it run, what is blocked, and is it ready to release? |
 | [App Feedback](APP_FEEDBACK.md) | Which defects and design issues matter most, and how should fixes be accepted? |
 | [App Workflow](APP_WORKFLOW.md) | What does the user do, with screenshots and step-by-step health? |

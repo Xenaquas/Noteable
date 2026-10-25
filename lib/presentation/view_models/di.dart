@@ -8,6 +8,7 @@ import '../../data/repositories/task_repository.dart';
 import '../../data/repositories/schedule_repository.dart';
 import '../../data/repositories/reminder_repository.dart';
 import '../../core/services/lock_service.dart';
+import '../../core/services/note_authorization.dart';
 import '../../core/services/notification_sync_service.dart';
 import '../../data/sources/settings_local_source.dart';
 import '../../domain/repositories/note_repository.dart';
@@ -24,7 +25,14 @@ final settingsLocalSourceProvider = Provider<SettingsLocalSource>((ref) {
 });
 
 final noteRepoProvider = Provider<NoteRepository>((ref) {
-  return data.NoteRepository(ref.read(dbProvider));
+  return data.NoteRepository(ref.read(dbProvider),
+      authorization: ref.read(noteAuthorizationProvider));
+});
+
+final noteAuthorizationProvider = Provider<NoteAuthorization>((ref) {
+  final authorization = NoteAuthorization();
+  ref.onDispose(authorization.dispose);
+  return authorization;
 });
 
 final taskRepoProvider = Provider<TaskRepository>((ref) {
@@ -48,5 +56,11 @@ final notificationSyncServiceProvider =
 });
 
 final lockServiceProvider = Provider<LockService>((ref) {
-  return LockService(ref.read(sharedPreferencesProvider));
+  final repo = ref.read(noteRepoProvider);
+  return LockService(ref.read(sharedPreferencesProvider),
+    authorization: ref.read(noteAuthorizationProvider),
+    isNoteLocked: repo.isNoteLocked,
+    lockedNoteIds: () async => (await repo.listNotes())
+        .where((n) => n.isLocked).map((n) => n.id!).toList(),
+  );
 });

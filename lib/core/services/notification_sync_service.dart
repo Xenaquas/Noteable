@@ -60,8 +60,10 @@ class NotificationSyncService {
     if (!_foregroundActive) {
       await _plugin.zonedSchedule(
         id,
-        title ?? 'Reminder',
-        body ?? '${reminder.ownerType} due',
+        reminder.ownerType == 'note' ? 'Note reminder' : title ?? 'Reminder',
+        reminder.ownerType == 'note'
+            ? 'A note reminder is due. Open the app to view it.'
+            : body ?? '${reminder.ownerType} due',
         tz.TZDateTime.from(reminder.fireAt, tz.local),
         _notificationDetails(tone),
         androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,

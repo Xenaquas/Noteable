@@ -1,0 +1,61 @@
+00:00 +0: loading A:/Android Flutter/digital_memory/test/lock_service_test.dart
+00:00 +0: A:/Android Flutter/digital_memory/test/lock_service_test.dart: PIN setup rejects short, nonnumeric and whitespace input
+00:00 +1: A:/Android Flutter/digital_memory/test/lock_service_test.dart: new PIN is never written to ordinary preferences
+00:24 +2: A:/Android Flutter/digital_memory/test/lock_service_test.dart: legacy PIN migrates without losing the existing credential
+00:59 +3: A:/Android Flutter/digital_memory/test/lock_service_test.dart: failed PIN attempts remain throttled after service restart
+01:45 +4: A:/Android Flutter/digital_memory/test/lock_service_test.dart: a verifier from the earlier storage policy migrates without changing it
+01:45 +5: A:/Android Flutter/digital_memory/test/lock_service_test.dart: interrupted migration retries cleanup and preserves current throttling
+01:45 +6: loading A:/Android Flutter/digital_memory/test/note_authorization_test.dart
+01:46 +6: A:/Android Flutter/digital_memory/test/note_authorization_test.dart: canceled and failed authentication never grant capabilities
+01:46 +7: A:/Android Flutter/digital_memory/test/note_authorization_test.dart: a valid capability is limited to its note and requested operation
+01:46 +8: A:/Android Flutter/digital_memory/test/note_authorization_test.dart: attachment-only authorization cannot expose its owning note content
+01:46 +9: A:/Android Flutter/digital_memory/test/note_authorization_test.dart: timeout revokes access and requires fresh authentication
+01:46 +10: A:/Android Flutter/digital_memory/test/note_authorization_test.dart: backgrounding rejects an in-flight authentication result
+01:46 +11: A:/Android Flutter/digital_memory/test/note_authorization_test.dart: timer Off still revokes protected access on background and relock
+01:46 +12: A:/Android Flutter/digital_memory/test/note_authorization_test.dart: revoked pending authentication cannot block or overwrite a new attempt
+01:46 +13: loading A:/Android Flutter/digital_memory/test/note_repository_privacy_test.dart
+01:47 +13: A:/Android Flutter/digital_memory/test/note_repository_privacy_test.dart: (setUpAll)
+01:47 +13: A:/Android Flutter/digital_memory/test/note_repository_privacy_test.dart: direct reads of locked content fail closed
+01:47 +14: A:/Android Flutter/digital_memory/test/note_repository_privacy_test.dart: lists do not expose locked titles, bodies, category or timestamps
+01:47 +15: A:/Android Flutter/digital_memory/test/note_repository_privacy_test.dart: File Manager and attachment queries hide protected paths and names
+01:47 +16: A:/Android Flutter/digital_memory/test/note_repository_privacy_test.dart: search excludes locked content
+01:47 +17: A:/Android Flutter/digital_memory/test/note_repository_privacy_test.dart: attachment capability cannot be used to request the owner body
+01:47 +18: A:/Android Flutter/digital_memory/test/note_repository_privacy_test.dart: unauthorized writes and deletion preserve the existing private records
+01:47 +19: A:/Android Flutter/digital_memory/test/note_repository_privacy_test.dart: (tearDownAll)
+01:48 +19: loading A:/Android Flutter/digital_memory/test/privacy_host_test.dart
+01:48 +19: A:/Android Flutter/digital_memory/test/privacy_host_test.dart: expiration hides already pushed private content and semantics
+01:50 +20: A:/Android Flutter/digital_memory/test/privacy_host_test.dart: background and resume keep private content covered
+01:50 +21: A:/Android Flutter/digital_memory/test/privacy_host_test.dart: canceling PIN confirmation creates no credential or access
+01:50 +22: A:/Android Flutter/digital_memory/test/privacy_host_test.dart: the privacy shield prevents keyboard access to cached content
+01:50 +23: loading A:/Android Flutter/digital_memory/test/privacy_routes_test.dart
+01:52 +23: A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: (setUpAll)
+01:58 +23: A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: preview direct route: cancel denies private data
+02:00 +24: A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: editor direct route: cancel denies private data
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+│ #0   new FlutterSoundRecorder (package:flutter_sound/public/flutter_sound_recorder.dart:231:13)
+│ #1   new _NoteEditorScreenState (package:digital_memory/presentation/views/note_editor/note_editor_screen.dart:59:48)
+├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+│ 🐛 ctor: FlutterSoundRecorder()
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+│ #0   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:549:13)
+│ #1   FlutterSoundRecorder.closeRecorder.<anonymous closure> (package:flutter_sound/public/flutter_sound_recorder.dart:544:14)
+├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+│ 🐛 FS:---> _closeAudioSession 
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+[38;5;12m┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;12m│ #0   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:553:15)[0m
+[38;5;12m│ #1   FlutterSoundRecorder.closeRecorder.<anonymous closure> (package:flutter_sound/public/flutter_sound_recorder.dart:544:14)[0m
+[38;5;12m├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄[0m
+[38;5;12m│ 💡 Recorder already close[0m
+[38;5;12m└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+02:00 +25: A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: File Manager never reveals unauthorized locked attachment metadata
+02:01 +26: A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: an unlocked note preview renders without authentication
+02:02 +27: A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: verified PIN unlocks only the requested note and expiry covers it
+02:10 +28: A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: revoking an open PIN prompt permits fresh root authentication
+02:17 +29: A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: (tearDownAll)
+02:17 +29: loading A:/Android Flutter/digital_memory/test/widget_test.dart
+02:18 +29: A:/Android Flutter/digital_memory/test/widget_test.dart: (setUpAll)
+02:19 +29: A:/Android Flutter/digital_memory/test/widget_test.dart: Home renders public notes and redacts private content
+02:22 +30: A:/Android Flutter/digital_memory/test/widget_test.dart: (tearDownAll)
+02:22 +30: All tests passed!

@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/services/lock_service.dart';
+import '../../../../core/services/note_authorization.dart';
 import '../../../../domain/entities/attachment_entity.dart';
 import '../../../../domain/entities/note_entity.dart';
 import '../../note_preview/note_preview_screen.dart';
 
 class VaultSession extends ChangeNotifier {
+  VaultSession(this._authorization) {
+    _authorization.addListener(notifyListeners);
+  }
+  final NoteAuthorization _authorization;
   bool _unlocked = false;
 
-  bool get unlocked => _unlocked;
+  bool get unlocked => _unlocked && _authorization.hasReadAccess;
 
   Future<bool> ensureUnlocked(
     BuildContext context,
     LockService lockService, {
     String reason = 'Unlock private space',
   }) async {
-    if (_unlocked) return true;
-    final ok = await lockService.authenticate(
-      context: context,
-      reason: reason,
-    );
+    final ok = await lockService.authorizeVault(context);
     if (ok) {
       _unlocked = true;
       notifyListeners();
@@ -28,9 +29,15 @@ class VaultSession extends ChangeNotifier {
   }
 
   void relock() {
-    if (!_unlocked) return;
+    _authorization.relock();
     _unlocked = false;
     notifyListeners();
+  }
+
+  @override
+  void dispose() {
+    _authorization.removeListener(notifyListeners);
+    super.dispose();
   }
 }
 
@@ -90,6 +97,8 @@ Future<void> showLockedNotesSheet({
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    IconButton(onPressed: vaultSession.relock,
+                      tooltip: 'Relock private notes', icon: const Icon(Icons.lock)),
                     Text(
                       'Locked notes',
                       style: theme.titleLarge?.copyWith(
@@ -315,7 +324,6 @@ class _LockedNoteTile extends StatelessWidget {
             builder: (_) => NotePreviewScreen(
               noteId: note.id!,
               heroTag: 'vault-note-${note.id}',
-              skipLockCheck: true,
             ),
           ),
         );

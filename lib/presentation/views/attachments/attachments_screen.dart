@@ -111,7 +111,6 @@ class AttachmentsScreen extends ConsumerWidget {
                                       builder: (_) => NotePreviewScreen(
                                         noteId: note.id!,
                                         heroTag: 'attachment-note-${note.id}',
-                                        skipLockCheck: note.isLocked,
                                       ),
                                     ),
                                   ),

@@ -1,0 +1,5 @@
+
+Algorithm : SHA256
+Hash      : 88ABECC095CFFC314E930CCEEE34A97E7F5715AD2D3C17C2B8C203684CBFF201
+Path      : A:\Android Flutter\digital_memory\build\app\outputs\flutter-apk\app-debug.apk
+

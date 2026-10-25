@@ -124,5 +124,12 @@
     "document": "docs/documents/archive/Summary.docx",
     "document_sha256": "94354e58ed03586d09efa1f3c1be8fcb66e4ed1bb683b0b5053322910490a33e",
     "embedded_images": 0
+  },
+  {
+    "source": "docs/PHASE_A_SECURITY_REVIEW.md",
+    "source_sha256": "916368b4898198d647d8fd93f14486940053c1f1ed46f62172934a209e9797d8",
+    "document": "docs/documents/current/PHASE_A_SECURITY_REVIEW.docx",
+    "document_sha256": "7b22dd65d22f6d131dd673d8c57c5da124f844388e5f5a32461b4b3ec4d81d16",
+    "embedded_images": 3
   }
 ]

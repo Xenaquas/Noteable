@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-19",
+  "phase": "A privacy only",
+  "baseline": "d9c56f80ce354af4f5157e4aca23b28e7cbba177",
+  "github_branch": "fix/phase-a-privacy",
+  "release_gate": "FAIL",
+  "phase_b_started": false,
+  "native_doc": {
+    "id": "1yRmxdBtS4XI_VEaKu1BRNRTdAQ5gw6JVS9BnpMbSZMs",
+    "url": "https://docs.google.com/document/d/1yRmxdBtS4XI_VEaKu1BRNRTdAQ5gw6JVS9BnpMbSZMs/edit?usp=drivesdk",
+    "pages_verified": 9
+  },
+  "word": {
+    "id": "1kWq_upe5S0uGa4OA62hEqb999-lplx6g",
+    "local": "docs/documents/current/PHASE_A_SECURITY_REVIEW.docx",
+    "pages_verified": 9
+  },
+  "markdown": {
+    "id": "1OYBY3PxVT8f98tzQqSI74MsMeWEbiPCk",
+    "local": "docs/PHASE_A_SECURITY_REVIEW.md"
+  },
+  "diagram": {
+    "id": "1K_i7w8XwCFtVGcul5mWLyzYeVxa3cs4z",
+    "board": "https://www.tldraw.com/f/MJ8ymcLzU-nKT2TWyaEVd",
+    "local": "docs/diagrams/phase-a-authorization.png"
+  },
+  "evidence_folder": {
+    "id": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM",
+    "url": "https://drive.google.com/drive/folders/1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+  },
+  "evidence": [
+    {
+      "file": "analyze-final.txt",
+      "id": "18xlOixOjev4Q_fm7OmKhMaAQweeLFy9X",
+      "url": "https://drive.google.com/file/d/18xlOixOjev4Q_fm7OmKhMaAQweeLFy9X/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "analyze-intermediate.txt",
+      "id": "1TRkFhA7YuoxyNTepmzcANqFWs6FjxgRW",
+      "url": "https://drive.google.com/file/d/1TRkFhA7YuoxyNTepmzcANqFWs6FjxgRW/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "android-apk-sha256.txt",
+      "id": "1G8VOLDP1tkEvwmk-LroqUnzWZoFtA87g",
+      "url": "https://drive.google.com/file/d/1G8VOLDP1tkEvwmk-LroqUnzWZoFtA87g/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "android-app-build-final.txt",
+      "id": "1FJ2E_qgDIb041E5Xv-HNCK9TMFpwks5d",
+      "url": "https://drive.google.com/file/d/1FJ2E_qgDIb041E5Xv-HNCK9TMFpwks5d/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "android-debug-build-final.txt",
+      "id": "1z3PTLW7ChE7IPj4heQw4MwpCfIEXKCv0",
+      "url": "https://drive.google.com/file/d/1z3PTLW7ChE7IPj4heQw4MwpCfIEXKCv0/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "android-debug-build.txt",
+      "id": "1XrYExJndrkJg6vFrPD812I06Lr7-_c0c",
+      "url": "https://drive.google.com/file/d/1XrYExJndrkJg6vFrPD812I06Lr7-_c0c/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "android-integration-final.txt",
+      "id": "1uWKdcispqKaKwq6OKWqgreHNImYTFIUI",
+      "url": "https://drive.google.com/file/d/1uWKdcispqKaKwq6OKWqgreHNImYTFIUI/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "android-integration.txt",
+      "id": "11CYQusycIKlP9XDwe357hmLhkWVzOjHP",
+      "url": "https://drive.google.com/file/d/11CYQusycIKlP9XDwe357hmLhkWVzOjHP/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "android-secure-window.png",
+      "id": "1miNTlEx4ltS1nhzgqNtz0G4N4AsOkXn8",
+      "url": "https://drive.google.com/file/d/1miNTlEx4ltS1nhzgqNtz0G4N4AsOkXn8/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "android-update-install.txt",
+      "id": "1UZpeA0qNj31xDcweyAdOzsa8F0B_5I2Y",
+      "url": "https://drive.google.com/file/d/1UZpeA0qNj31xDcweyAdOzsa8F0B_5I2Y/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "android-window-flags.txt",
+      "id": "1zC86AUEy6R7rScDVPbrLNCIqpipkWVs7",
+      "url": "https://drive.google.com/file/d/1zC86AUEy6R7rScDVPbrLNCIqpipkWVs7/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "changed-files.txt",
+      "id": "1xW3X7R-CLvuU89XUuxflYtivfzriegEZ",
+      "url": "https://drive.google.com/file/d/1xW3X7R-CLvuU89XUuxflYtivfzriegEZ/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "document-qa.json",
+      "id": "17mOs_t1pG16UgtEdmqM0UcbQrWcgC-Wy",
+      "url": "https://drive.google.com/file/d/17mOs_t1pG16UgtEdmqM0UcbQrWcgC-Wy/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "flutter-test-before-overlay-fix.txt",
+      "id": "1AGMcpSKX4cv6lGeaE_moqTvH63oqFfwX",
+      "url": "https://drive.google.com/file/d/1AGMcpSKX4cv6lGeaE_moqTvH63oqFfwX/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "flutter-test-final.txt",
+      "id": "1TPB1pRQZaY2ZYfNBsUC1wNhwh5FWgRRR",
+      "url": "https://drive.google.com/file/d/1TPB1pRQZaY2ZYfNBsUC1wNhwh5FWgRRR/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "prompt-revocation-final.txt",
+      "id": "1hs1lMLgPwqgij_hHNFeNNaDTJgoSLJZV",
+      "url": "https://drive.google.com/file/d/1hs1lMLgPwqgij_hHNFeNNaDTJgoSLJZV/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "README.md",
+      "id": "192X3WCug9Kj98mTjuZpuEpGZIZCHtsTY",
+      "url": "https://drive.google.com/file/d/192X3WCug9Kj98mTjuZpuEpGZIZCHtsTY/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "review-regression-green.txt",
+      "id": "1sUqDirHa3pfmjI1Exv3llhurcX_zxuNd",
+      "url": "https://drive.google.com/file/d/1sUqDirHa3pfmjI1Exv3llhurcX_zxuNd/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "review-regression-red.txt",
+      "id": "17bK88m2sjMtLxIla-VyZuQXGWdyXgILG",
+      "url": "https://drive.google.com/file/d/17bK88m2sjMtLxIla-VyZuQXGWdyXgILG/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "routes-before-overlay-fix.txt",
+      "id": "11MRA_VBQfrn-T1nm3xxUOrufHzFg1TlB",
+      "url": "https://drive.google.com/file/d/11MRA_VBQfrn-T1nm3xxUOrufHzFg1TlB/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "routes-diagnostic.txt",
+      "id": "1sLb1AzC5LocAAg0ef5pJOe1pGBCAk01x",
+      "url": "https://drive.google.com/file/d/1sLb1AzC5LocAAg0ef5pJOe1pGBCAk01x/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    },
+    {
+      "file": "routes-regression.txt",
+      "id": "1AvbFJhgtmU9K2FpkLW2d-uAIb79T91If",
+      "url": "https://drive.google.com/file/d/1AvbFJhgtmU9K2FpkLW2d-uAIb79T91If/view?usp=drivesdk",
+      "parent": "1fnr1SGzwA49haLSg6SaZhk9h5TnIT9JM"
+    }
+  ],
+  "notes": [
+    "Prior audit documents and evidence remain historical snapshots. Their Word copies were not rewritten during this security repair; README/index Markdown navigation now links the Phase A report.",
+    "Source/report publication does not back up application databases or media.",
+    "The original emulator preservation incident remains unresolved; see the report."
+  ]
+}

@@ -7,10 +7,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../domain/entities/attachment_entity.dart';
 import '../../domain/entities/note_entity.dart';
 import '../../domain/repositories/note_repository.dart';
+import '../../core/services/note_authorization.dart';
 import 'di.dart';
 
 final homeVmProvider = ChangeNotifierProvider<HomeViewModel>((ref) {
-  return HomeViewModel(ref.read(noteRepoProvider));
+  return HomeViewModel(ref.read(noteRepoProvider), ref.read(noteAuthorizationProvider));
 });
 
 enum SortOption { updated, created, title }
@@ -18,11 +19,13 @@ enum SortOption { updated, created, title }
 enum ViewMode { grid, list }
 
 class HomeViewModel extends ChangeNotifier {
-  HomeViewModel(this._repo) {
+  HomeViewModel(this._repo, this._authorization) {
     _changeSub = _repo.changes.listen((_) => loadNotes());
   }
 
   final NoteRepository _repo;
+  final NoteAuthorization _authorization;
+  bool _disposed = false;
   StreamSubscription<void>? _changeSub;
   SharedPreferences? _prefs;
 
@@ -78,15 +81,23 @@ class HomeViewModel extends ChangeNotifier {
 
   List<AttachmentEntity> attachmentsFor(int? noteId) {
     if (noteId == null) return const [];
+    final owners = _notes.where((note) => note.id == noteId);
+    if (owners.isEmpty || (owners.first.isLocked &&
+        !_authorization.allows(noteId, NoteOperation.attachment))) {
+      return const [];
+    }
     final cached = _attachments[noteId];
     if (cached != null) return cached;
 
     if (!_loadingAttachments.contains(noteId)) {
       _loadingAttachments.add(noteId);
       _repo.listAttachments(noteId).then((list) {
+        if (_disposed) return;
         _attachments[noteId] = list;
         _loadingAttachments.remove(noteId);
         notifyListeners();
+      }).onError<NoteAccessDenied>((_, __) {
+        _loadingAttachments.remove(noteId);
       });
     }
 
@@ -169,6 +180,7 @@ class HomeViewModel extends ChangeNotifier {
 
   @override
   void dispose() {
+    _disposed = true;
     _changeSub?.cancel();
     super.dispose();
   }

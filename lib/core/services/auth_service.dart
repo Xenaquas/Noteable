@@ -8,7 +8,8 @@ class AuthService {
     try {
       final canCheckBiometrics = await _auth.canCheckBiometrics;
       final isDeviceSupported = await _auth.isDeviceSupported();
-      return canCheckBiometrics && isDeviceSupported;
+      return canCheckBiometrics && isDeviceSupported &&
+          (await _auth.getAvailableBiometrics()).isNotEmpty;
     } catch (_) {
       return false;
     }
@@ -19,10 +20,9 @@ class AuthService {
     bool biometricOnly = false,
   }) async {
     try {
-      final canCheck = await _auth.canCheckBiometrics;
       final isDeviceSupported = await _auth.isDeviceSupported();
 
-      if (!canCheck || !isDeviceSupported) {
+      if (!isDeviceSupported) {
         // No biometric support available
         return false;
       }
@@ -30,7 +30,7 @@ class AuthService {
       // Use the simple API compatible with local_auth 3.x
       return await _auth.authenticate(
         localizedReason: reason,
-        persistAcrossBackgrounding: true,
+        persistAcrossBackgrounding: false,
         biometricOnly: biometricOnly,
       );
     } catch (_) {

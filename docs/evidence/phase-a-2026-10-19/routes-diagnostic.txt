@@ -1,0 +1,81 @@
+00:00 +0: loading A:/Android Flutter/digital_memory/test/privacy_routes_test.dart
+00:00 +0: (setUpAll)
+00:06 +0: preview direct route: cancel denies private data
+00:17 +1: editor direct route: cancel denies private data
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+│ #0   new FlutterSoundRecorder (package:flutter_sound/public/flutter_sound_recorder.dart:231:13)
+│ #1   new _NoteEditorScreenState (package:digital_memory/presentation/views/note_editor/note_editor_screen.dart:59:48)
+├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+│ 🐛 ctor: FlutterSoundRecorder()
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Visible test labels at timeout: Open note | Edit Note
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Timed out waiting for the application state
+
+When the exception was thrown, this was the stack:
+#0      fail (package:matcher/src/expect/expect.dart:187:31)
+#1      pumpUntil (file:///A:/Android%20Flutter/digital_memory/test/support/privacy_fixture.dart:115:3)
+<asynchronous suspension>
+#2      main.<anonymous closure> (file:///A:/Android%20Flutter/digital_memory/test/privacy_routes_test.dart:28:7)
+<asynchronous suspension>
+#3      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#4      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  editor direct route: cancel denies private data
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:43 +1 -1: editor direct route: cancel denies private data [E]
+  Test failed. See exception logs above.
+  The test description was: editor direct route: cancel denies private data
+  
+00:43 +1 -1: File Manager never reveals unauthorized locked attachment metadata
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+│ #0   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:549:13)
+│ #1   FlutterSoundRecorder.closeRecorder.<anonymous closure> (package:flutter_sound/public/flutter_sound_recorder.dart:544:14)
+├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+│ 🐛 FS:---> _closeAudioSession 
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+[38;5;12m┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;12m│ #0   FlutterSoundRecorder._closeAudioSession (package:flutter_sound/public/flutter_sound_recorder.dart:553:15)[0m
+[38;5;12m│ #1   FlutterSoundRecorder.closeRecorder.<anonymous closure> (package:flutter_sound/public/flutter_sound_recorder.dart:544:14)[0m
+[38;5;12m├┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄[0m
+[38;5;12m│ 💡 Recorder already close[0m
+[38;5;12m└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:44 +2 -1: an unlocked note preview renders without authentication
+00:45 +3 -1: verified PIN unlocks only the requested note and expiry covers it
+Visible test labels at timeout: 
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Timed out waiting for the application state
+
+When the exception was thrown, this was the stack:
+#0      fail (package:matcher/src/expect/expect.dart:187:31)
+#1      pumpUntil (file:///A:/Android%20Flutter/digital_memory/test/support/privacy_fixture.dart:115:3)
+<asynchronous suspension>
+#2      main.<anonymous closure> (file:///A:/Android%20Flutter/digital_memory/test/privacy_routes_test.dart:60:5)
+<asynchronous suspension>
+#3      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#4      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  verified PIN unlocks only the requested note and expiry covers it
+════════════════════════════════════════════════════════════════════════════════════════════════════
+01:06 +3 -2: verified PIN unlocks only the requested note and expiry covers it [E]
+  Test failed. See exception logs above.
+  The test description was: verified PIN unlocks only the requested note and expiry covers it
+  
+01:06 +3 -2: (tearDownAll)
+01:06 +3 -2: Some tests failed.
+
+Failing tests:
+  A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: editor direct route: cancel denies private data
+  A:/Android Flutter/digital_memory/test/privacy_routes_test.dart: verified PIN unlocks only the requested note and expiry covers it

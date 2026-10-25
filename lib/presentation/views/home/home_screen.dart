@@ -16,12 +16,11 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:share_plus/share_plus.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 
-import '../../../core/services/auth_service.dart';
+import '../../../core/services/note_authorization.dart';
 import '../../../data/local/databases/app_drift_database.dart';
 import '../../../domain/entities/attachment_entity.dart';
 import '../../../domain/entities/note_entity.dart';
 import '../../view_models/di.dart';
-import '../../view_models/app_settings_vm.dart';
 import '../../view_models/home_vm.dart';
 import '../../widgets/note_card.dart';
 import '../attachments/attachments_screen.dart';
@@ -70,12 +69,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
     _NavDestination(icon: Icons.info_outline, label: 'About', route: '/about'),
   ];
 
-  DateTime? _lastBackgrounded;
-  bool _lockDialogOpen = false;
   final ValueNotifier<bool> _fabVisible = ValueNotifier<bool>(true);
   final ValueNotifier<bool> _dialOpen = ValueNotifier<bool>(false);
   final ValueNotifier<bool> _dialController = ValueNotifier<bool>(false);
-  final VaultSession _vaultSession = VaultSession();
+  late final VaultSession _vaultSession;
   bool _isSearching = false;
   final TextEditingController _searchCtrl = TextEditingController();
   final FocusNode _searchFocus = FocusNode();
@@ -84,13 +81,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   @override
   void initState() {
     super.initState();
+    _vaultSession = VaultSession(ref.read(noteAuthorizationProvider));
     final safeIndex = widget.initialTabIndex.clamp(0, 3);
     _tabController =
         TabController(length: 4, vsync: this, initialIndex: safeIndex);
     _tabController.addListener(() => setState(() {}));
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       await ref.read(homeVmProvider).init();
-      await _maybeRequireUnlock(force: true);
     });
     WidgetsBinding.instance.addObserver(this);
   }
@@ -112,10 +109,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
       ref.read(homeVmProvider).loadNotes();
-      _maybeRequireUnlock();
-    } else if (state == AppLifecycleState.paused ||
-        state == AppLifecycleState.inactive) {
-      _lastBackgrounded = DateTime.now();
     }
     super.didChangeAppLifecycleState(state);
   }
@@ -211,92 +204,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen>
         );
       },
     );
-  }
-
-  Future<void> _maybeRequireUnlock({bool force = false}) async {
-    final settings = ref.read(appSettingsProvider);
-    if (!settings.isBiometricEnabled || !mounted) return;
-
-    final now = DateTime.now();
-    final shouldLock =
-        force ||
-        _lastBackgrounded == null ||
-        now.difference(_lastBackgrounded!) >=
-            Duration(minutes: settings.autoLockMinutes);
-
-    if (!shouldLock || _lockDialogOpen) return;
-    _lockDialogOpen = true;
-
-    final auth = ref.read(authServiceProvider);
-    final available = await auth.isBiometricAvailable;
-    if (!available) {
-      _lockDialogOpen = false;
-      if (mounted) {
-        await ref.read(appSettingsProvider.notifier).setBiometricEnabled(false);
-        if (!mounted) return;
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Biometric lock turned off (unavailable).'),
-          ),
-        );
-      }
-      return;
-    }
-    if (!mounted) {
-      _lockDialogOpen = false;
-      return;
-    }
-
-    await showDialog<void>(
-      context: context,
-      barrierDismissible: false,
-      builder: (context) {
-        String? error;
-        return StatefulBuilder(
-          builder: (context, setState) {
-            return AlertDialog(
-              title: const Text('Unlock required'),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Authenticate to continue.'),
-                  if (error != null) ...[
-                    const SizedBox(height: 8),
-                    Text(
-                      error!,
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.error,
-                      ),
-                    ),
-                  ],
-                ],
-              ),
-              actions: [
-                TextButton(
-                  onPressed: () async {
-                    final ok = await auth.authenticate(
-                      reason: 'Unlock Digital Memory',
-                    );
-                    if (!mounted) return;
-                    if (ok) {
-                      if (!context.mounted) return;
-                      Navigator.of(context).pop();
-                      return;
-                    }
-                    setState(() => error = 'Authentication failed. Try again.');
-                  },
-                  child: const Text('Unlock'),
-                ),
-              ],
-            );
-          },
-        );
-      },
-    );
-
-    _lockDialogOpen = false;
-    _lastBackgrounded = DateTime.now();
   }
 
   @override
@@ -844,7 +751,6 @@ class _NotesPane extends ConsumerWidget {
             openBuilder: (_, __) => NotePreviewScreen(
               noteId: note.id!,
               heroTag: heroTag,
-              skipLockCheck: note.isLocked,
             ),
             closedBuilder: (context, open) => NoteCard(
               note: note,
@@ -858,9 +764,9 @@ class _NotesPane extends ConsumerWidget {
                 if (note.isLocked) {
                   final ok = await ref
                       .read(lockServiceProvider)
-                      .authenticate(
+                      .authorizeNote(
                         context: context,
-                        reason: 'Unlock note to view content',
+                        noteId: note.id!,
                       );
                   if (!ok) return;
                 }
@@ -883,7 +789,6 @@ class _NotesPane extends ConsumerWidget {
               openBuilder: (_, __) => NotePreviewScreen(
                 noteId: note.id!,
                 heroTag: heroTag,
-                skipLockCheck: note.isLocked,
               ),
               closedBuilder: (context, open) => NoteCard(
                 note: note,
@@ -897,9 +802,9 @@ class _NotesPane extends ConsumerWidget {
                   if (note.isLocked) {
                     final ok = await ref
                         .read(lockServiceProvider)
-                        .authenticate(
+                        .authorizeNote(
                           context: context,
-                          reason: 'Unlock note to view content',
+                          noteId: note.id!,
                         );
                     if (!ok) return;
                   }
@@ -915,7 +820,13 @@ class _NotesPane extends ConsumerWidget {
         key: ValueKey('note-${note.id}'),
         direction: DismissDirection.endToStart,
         background: _dismissBackground(context),
-        confirmDismiss: (_) => _confirmDelete(context),
+        confirmDismiss: (_) async {
+          if (!await ref.read(lockServiceProvider).authorizeNote(context: context,
+              noteId: note.id!, operation: NoteOperation.delete) || !context.mounted) {
+            return false;
+          }
+          return _confirmDelete(context);
+        },
         onDismissed: (_) =>
             _deleteNoteWithUndo(context, note, attachments, ref),
         child: card,
@@ -949,9 +860,15 @@ class _NotesPane extends ConsumerWidget {
     );
   }
 
-  Future<void> _togglePin(NoteEntity note, WidgetRef ref) async {
+  Future<void> _togglePin(BuildContext context, NoteEntity note, WidgetRef ref) async {
     final repo = ref.read(noteRepoProvider);
-    await repo.upsert(note.copyWith(isPinned: !note.isPinned));
+    if (!await ref.read(lockServiceProvider).authorizeNote(context: context,
+        noteId: note.id!, operation: NoteOperation.edit)) {
+      return;
+    }
+    final current = await repo.getNote(note.id!, operation: NoteOperation.edit);
+    if (current == null) return;
+    await repo.upsert(current.copyWith(isPinned: !current.isPinned));
     await ref.read(homeVmProvider).loadNotes();
   }
 
@@ -962,13 +879,15 @@ class _NotesPane extends ConsumerWidget {
   ) async {
     final ok = await ref
         .read(lockServiceProvider)
-        .authenticate(
+        .authorizeNote(
           context: context,
-          reason: note.isLocked ? 'Unlock this note' : 'Lock this note',
+          noteId: note.id!, operation: NoteOperation.changeLock,
         );
     if (!ok) return;
     final repo = ref.read(noteRepoProvider);
-    await repo.upsert(note.copyWith(isLocked: !note.isLocked));
+    final current = await repo.getNote(note.id!, operation: NoteOperation.changeLock);
+    if (current == null) return;
+    await repo.upsert(current.copyWith(isLocked: !current.isLocked));
     await ref.read(homeVmProvider).loadNotes();
   }
 
@@ -1001,6 +920,11 @@ class _NotesPane extends ConsumerWidget {
   ) async {
     if (note.id == null) return;
     final repo = ref.read(noteRepoProvider);
+    if (!await ref.read(lockServiceProvider).authorizeNote(context: context,
+        noteId: note.id!, operation: NoteOperation.delete)) {
+      return;
+    }
+    note = (await repo.getNote(note.id!, operation: NoteOperation.delete))!;
     final safeAttachments = attachments.isNotEmpty
         ? attachments
         : await repo.listAttachments(note.id!);
@@ -1053,6 +977,11 @@ class _NotesPane extends ConsumerWidget {
     WidgetRef ref,
   ) async {
     final repo = ref.read(noteRepoProvider);
+    if (!await ref.read(lockServiceProvider).authorizeNote(context: context,
+        noteId: note.id!, operation: NoteOperation.share)) {
+      return;
+    }
+    note = (await repo.getNote(note.id!, operation: NoteOperation.share))!;
     final attachments = note.id != null
         ? await repo.listAttachments(note.id!)
         : <AttachmentEntity>[];
@@ -1074,7 +1003,7 @@ class _NotesPane extends ConsumerWidget {
                 title: const Text('Share note as PDF (content only)'),
                 onTap: () async {
                   Navigator.pop(ctx);
-                  await _shareNoteAsPdf(note, attachments);
+                  await _shareNoteAsPdf(note, attachments, ref);
                 },
               ),
               ListTile(
@@ -1082,7 +1011,7 @@ class _NotesPane extends ConsumerWidget {
                 title: const Text('Share note + attachments as ZIP'),
                 onTap: () async {
                   Navigator.pop(ctx);
-                  await _shareNoteAsZip(note, attachments);
+                  await _shareNoteAsZip(note, attachments, ref);
                 },
               ),
             ],
@@ -1092,7 +1021,8 @@ class _NotesPane extends ConsumerWidget {
     );
   }
 
-  Future<File> _buildNotePdf(NoteEntity note) async {
+  Future<File> _buildNotePdf(NoteEntity note, WidgetRef ref) async {
+    note = (await ref.read(noteRepoProvider).getNote(note.id!, operation: NoteOperation.share))!;
     final pdf = pw.Document();
     final text = note.contentPlain.trim().isEmpty
         ? 'No content'
@@ -1131,8 +1061,13 @@ class _NotesPane extends ConsumerWidget {
   Future<void> _shareNoteAsPdf(
     NoteEntity note,
     List<AttachmentEntity> attachments,
+    WidgetRef ref,
   ) async {
-    final pdfFile = await _buildNotePdf(note);
+    final pdfFile = await _buildNotePdf(note, ref);
+    if (!ref.context.mounted || !await ref.read(lockServiceProvider).authorizeNote(
+        context: ref.context, noteId: note.id!, operation: NoteOperation.share)) {
+      return;
+    }
     // ignore: deprecated_member_use
     await Share.shareXFiles(
       [XFile(pdfFile.path, name: pdfFile.uri.pathSegments.last)],
@@ -1144,9 +1079,10 @@ class _NotesPane extends ConsumerWidget {
   Future<void> _shareNoteAsZip(
     NoteEntity note,
     List<AttachmentEntity> attachments,
+    WidgetRef ref,
   ) async {
     final archive = Archive();
-    final pdfFile = await _buildNotePdf(note);
+    final pdfFile = await _buildNotePdf(note, ref);
     archive.addFile(
       ArchiveFile(
         pdfFile.uri.pathSegments.last,
@@ -1171,6 +1107,10 @@ class _NotesPane extends ConsumerWidget {
         '${dir.path}/$nameSafe-${DateTime.now().millisecondsSinceEpoch}.zip';
     final zipFile = File(zipPath)..writeAsBytesSync(bytes);
 
+    if (!ref.context.mounted || !await ref.read(lockServiceProvider).authorizeNote(
+        context: ref.context, noteId: note.id!, operation: NoteOperation.share)) {
+      return;
+    }
     // ignore: deprecated_member_use
     await Share.shareXFiles(
       [XFile(zipFile.path, name: '$nameSafe.zip')],
@@ -1203,7 +1143,7 @@ class _NotesPane extends ConsumerWidget {
                 title: Text(note.isPinned ? 'Unpin' : 'Pin'),
                 onTap: () async {
                   Navigator.pop(ctx);
-                  await _togglePin(note, ref);
+                  await _togglePin(context, note, ref);
                 },
               ),
               ListTile(
@@ -1232,6 +1172,10 @@ class _NotesPane extends ConsumerWidget {
                   final confirmed = await _confirmDelete(context);
                   if (!context.mounted || !confirmed) return;
                   final repo = ref.read(noteRepoProvider);
+                  if (!await ref.read(lockServiceProvider).authorizeNote(context: context,
+                      noteId: note.id!, operation: NoteOperation.delete)) {
+                    return;
+                  }
                   final attachments = await repo.listAttachments(note.id!);
                   if (!context.mounted) return;
                   await _deleteNoteWithUndo(context, note, attachments, ref);
@@ -1385,6 +1329,14 @@ class _AllPaneState extends ConsumerState<_AllPane> {
       reason: 'Authenticate to view private notes',
     );
     if (!ok || !mounted) return;
+    final repo = ref.read(noteRepoProvider);
+    final authorizedNotes = <NoteEntity>[];
+    for (final summary in lockedNotes) {
+      final note = await repo.getNote(summary.id!);
+      if (note != null) authorizedNotes.add(note);
+    }
+    lockedNotes = authorizedNotes;
+    await widget.notesVm.loadNotes();
     if (!context.mounted) return;
     await showLockedNotesSheet(
       context: context,
@@ -1701,7 +1653,6 @@ class _AllPaneState extends ConsumerState<_AllPane> {
                               openBuilder: (_, __) => NotePreviewScreen(
                                 noteId: note.id!,
                                 heroTag: heroTag,
-                                skipLockCheck: note.isLocked,
                               ),
                               closedBuilder: (context, open) => NoteCard(
                                 note: note,
@@ -1714,9 +1665,9 @@ class _AllPaneState extends ConsumerState<_AllPane> {
                                   if (note.isLocked) {
                                     final ok = await ref
                                         .read(lockServiceProvider)
-                                        .authenticate(
+                                        .authorizeNote(
                                           context: context,
-                                          reason: 'Unlock note to view content',
+                                          noteId: note.id!,
                                         );
                                     if (!ok) return;
                                   }
@@ -1758,7 +1709,6 @@ class _AllPaneState extends ConsumerState<_AllPane> {
                                 openBuilder: (_, __) => NotePreviewScreen(
                                   noteId: note.id!,
                                   heroTag: heroTag,
-                                  skipLockCheck: note.isLocked,
                                 ),
                                 closedBuilder: (context, open) => NoteCard(
                                   note: note,
@@ -1772,9 +1722,9 @@ class _AllPaneState extends ConsumerState<_AllPane> {
                                     if (note.isLocked) {
                                       final ok = await ref
                                           .read(lockServiceProvider)
-                                          .authenticate(
+                                          .authorizeNote(
                                             context: context,
-                                            reason: 'Unlock note to view content',
+                                            noteId: note.id!,
                                           );
                                       if (!ok) return;
                                     }

@@ -9,6 +9,7 @@ import '../presentation/view_models/di.dart';
 import '../presentation/view_models/app_settings_vm.dart';
 import '../presentation/views/home/home_screen.dart';
 import '../presentation/widgets/in_app_reminder_host.dart';
+import '../presentation/widgets/privacy_host.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>();
@@ -69,10 +70,10 @@ class App extends ConsumerWidget {
             Locale('hi'),
           ],
           locale: settings.locale,
-          builder: (context, child) => InAppReminderHost(
+          builder: (context, child) => PrivacyHost(child: InAppReminderHost(
             navigatorKey: _rootNavigatorKey,
             child: child ?? const SizedBox.shrink(),
-          ),
+          )),
           home: const HomeScreen(),
         );
       },
